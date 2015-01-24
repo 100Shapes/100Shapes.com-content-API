@@ -1,0 +1,13 @@
+db:
+  image: postgres
+  environment:
+    - POSTGRES_PASSWORD=fake_password
+web:
+  build: .
+  command: python manage.py runserver 0.0.0.0:8000
+  volumes:
+    - .:/home/app
+  ports:
+    - "8000:8000"
+  links:
+    - db
