@@ -1,5 +1,5 @@
 """
-Django settings for opencourts project.
+Django settings for ohs project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -70,8 +70,8 @@ MIDDLEWARE_CLASSES = (
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 )
 
-ROOT_URLCONF = 'opencourts.urls'
-WSGI_APPLICATION = 'opencourts.wsgi.application'
+ROOT_URLCONF = 'ohs.urls'
+WSGI_APPLICATION = 'ohs.wsgi.application'
 
 
 # Database
@@ -89,7 +89,7 @@ DATABASES = {
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'opencourts',
+#         'NAME': 'ohs',
 #         'USER': 'postgres',
 #         'PASSWORD': '',
 #         'HOST': '',  # Set to empty string for localhost.
@@ -147,7 +147,7 @@ TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
 LOGIN_URL = 'wagtailadmin_login'
 LOGIN_REDIRECT_URL = 'wagtailadmin_home'
 
-WAGTAIL_SITE_NAME = "opencourts"
+WAGTAIL_SITE_NAME = "ohs"
 
 # Use Elasticsearch as the search backend for extra performance and better search results:
 # http://wagtail.readthedocs.org/en/latest/howto/performance.html#search
@@ -156,7 +156,7 @@ WAGTAIL_SITE_NAME = "opencourts"
 # WAGTAILSEARCH_BACKENDS = {
 #     'default': {
 #         'BACKEND': 'wagtail.wagtailsearch.backends.elasticsearch.ElasticSearch',
-#         'INDEX': 'opencourts',
+#         'INDEX': 'ohs',
 #     },
 # }
 

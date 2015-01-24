@@ -34,7 +34,7 @@ COMPRESS_OFFLINE = True
 #     'default': {
 #         'BACKEND': 'redis_cache.cache.RedisCache',
 #         'LOCATION': '127.0.0.1:6379',
-#         'KEY_PREFIX': 'opencourts',
+#         'KEY_PREFIX': 'ohs',
 #         'OPTIONS': {
 #             'CLIENT_CLASS': 'redis_cache.client.DefaultClient',
 #         }
