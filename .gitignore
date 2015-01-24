@@ -56,4 +56,4 @@ target/
 *.sqlite3
 .DS_Store
 
-static/
+/static/
