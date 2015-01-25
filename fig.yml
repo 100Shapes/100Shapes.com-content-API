@@ -1,9 +1,3 @@
-db:
-  image: postgres
-  volumes:
-    - ./volumes/data:/var/lib/postgresql/data
-  environment:
-    - POSTGRES_PASSWORD=fake_password
 web:
   build: .
   command: python manage.py runserver 0.0.0.0:8000
@@ -13,3 +7,15 @@ web:
     - "8000:8000"
   links:
     - db
+
+dbdata:
+  image: postgres
+  command: echo "Data-only container for postgres"
+
+db:
+  image: postgres
+  environment:
+    - POSTGRES_USER=fake_user
+    - POSTGRES_PASSWORD=fake_pass
+  volumes_from:
+    - dbdata
