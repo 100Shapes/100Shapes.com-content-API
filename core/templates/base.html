@@ -27,6 +27,11 @@
 
         {% block content %}{% endblock %}
 
+        <footer>
+            <hr>
+            Copyright &copy; {% now "Y" %} 100 Shapes Ltd. All Rights Reserved.
+        </footer>
+
         {% compress js %}
             
             <script type="text/javascript" src="{% static 'js/ohs.js' %}"></script>
