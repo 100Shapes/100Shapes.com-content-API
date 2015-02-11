@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static core_tags wagtailcore_tags %}
+
+{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
+
+{% block content %}
+
+    {% if self.get_ancestors|length > 1 %}
+    <ol class="nav breadcrumb">
+
+    {% for page in self.get_ancestors %}
+        {% if page.is_root == False %}
+        <li><a href="{% pageurl page %}">{{ page.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+        <li class="current">{{ self.title }}</li>
+
+    </ol>
+    {% endif %}
+
+    <h1 class="giga">{{ self.title }}</h1>
+    <p class="alpha">{{ self.subtitle }}</p>
+
+    {{ self.content | richtext }}    
+{% endblock %}
