@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'compressor',
     'taggit',
     'modelcluster',
+    'wagtailapi',
 
     'wagtail.wagtailcore',
     'wagtail.wagtailadmin',
@@ -55,7 +56,7 @@ INSTALLED_APPS = (
     'wagtail.wagtailredirects',
     'wagtail.wagtailforms',
 
-    'core',
+    'blog',
 )
 
 MIDDLEWARE_CLASSES = (
