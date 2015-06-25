@@ -1,16 +1,32 @@
 from .base import *
 
-
+import os
 # Disable debug mode
 
-DEBUG = False
+
+DEBUG = os.environ.get('DEBUG', False)
 TEMPLATE_DEBUG = False
 
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('SECRET')
 
 # Compress static files offline
 # http://django-compressor.readthedocs.org/en/latest/settings/#django.conf.settings.COMPRESS_OFFLINE
 
-COMPRESS_OFFLINE = True
+COMPRESS_OFFLINE = False
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'HOST': 'db',
+        'PASSWORD': os.environ.get('DB_ENV_POSTGRES_PASSWORD', os.environ.get('POSTGRES_PASSWORD')),
+        'PORT': 5432,
+        'CONN_MAX_AGE': 600,  # number of seconds database connections should persist for
+    }
+}
 
 
 # Send notification emails as a background task using Celery,
@@ -40,6 +56,17 @@ COMPRESS_OFFLINE = True
 #         }
 #     }
 # }
+
+
+STATIC_URL = '/'
+MEDIA_URL = '/media/'
+
+import logging
+
+LOGGING = {
+    'version': 1,
+    'root': {'level': 'DEBUG' if DEBUG else 'INFO'},
+}
 
 
 try:

@@ -3,7 +3,7 @@ MAINTAINER 100 Shapes <paolo@100shapes.com>
 # Set correct environment variables.
 
 # ENV HOME /app
-ENV VIRTUAL_HOST civea.proto.100shapes.com
+ENV VIRTUAL_HOST proto.100shapes.com
 ENV PRODUCTION True
 
 # Use baseimage-docker's init process.
@@ -12,7 +12,6 @@ CMD ["/sbin/my_init"]
 #   Build system and git.
 RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
-RUN /pd_build/nodejs.sh
 
 RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
 
@@ -22,7 +21,6 @@ RUN apt-get -y install libpq-dev python-dev python-pip postgresql-server-dev-all
 
 ADD requirements.txt /home/app/
 
-RUN npm install -g less
 
 WORKDIR /home/app/
 
@@ -33,10 +31,17 @@ ADD . /home/app/
 
 WORKDIR /home/app/
 
-VOLUME /home/app/public
-
 RUN mkdir -p /home/app/public/
 RUN chmod -R 777 /home/app/public/
+
+ENV SECRET "TEMP"
+
+RUN python manage.py collectstatic --noinput
+
+VOLUME /home/app/public
+
+
+
 
 
 # Enable nginx
@@ -44,7 +49,6 @@ RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
 ADD env.conf /etc/nginx/main.d/env.conf
 ADD nginx.conf /etc/nginx/sites-enabled/nginx.conf
-
 
 
 # Clean up APT when done.

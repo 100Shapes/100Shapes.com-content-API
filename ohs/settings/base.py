@@ -18,15 +18,16 @@ PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('SECRET', '58o2my)=@l88=mso-h*npjz!g)qqywv=v3yp-b*2!gzvvv%=k!')
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', [])
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', [
+    'api.100shapes.com',
+    '.100shapes.com',
+    '.dockerhost'
+])
 
 
 # Application definition
@@ -78,14 +79,6 @@ WSGI_APPLICATION = 'ohs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-# SQLite (simplest install)
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': join(PROJECT_ROOT, 'db.sqlite3'),
-    }
-}
-
 # PostgreSQL (Recommended, but requires the psycopg2 library and Postgresql development headers)
 # DATABASES = {
 #     'default': {
@@ -113,8 +106,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_ROOT = join(PROJECT_ROOT, 'static')
-STATIC_URL = '/static/'
+STATIC_ROOT = join(PROJECT_ROOT, 'public')
+STATIC_URL = '/public/'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -122,16 +115,16 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-MEDIA_ROOT = join(PROJECT_ROOT, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = join(PROJECT_ROOT, 'public/media')
+MEDIA_URL = '/public/media/'
 
 
 # Django compressor settings
 # http://django-compressor.readthedocs.org/en/latest/settings/
 
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
+# COMPRESS_PRECOMPILERS = (
+#     ('text/x-scss', 'django_libsass.SassCompiler'),
+# )
 
 
 # Template configuration
