@@ -58,5 +58,10 @@ docs/_build/
 target/
 
 # OHS-Database
-db.sqlite3
 public
+*.sqlite3
+.DS_Store
+
+/static/
+.idea
+media/
