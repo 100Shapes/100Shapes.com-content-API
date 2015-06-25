@@ -93,6 +93,16 @@ class BlogPost(Page):
     @property
     def get_banner_url(self):
         return self.banner_image.get_rendition('original').url
+
+    @property
+    def get_category(self):
+        return self.category.category
+
+    @property
+    def get_author(self):
+        return self.posted_by.email
+    
+    
     
     
     content_panels = Page.content_panels + [
@@ -116,7 +126,7 @@ class BlogPost(Page):
         'body',
         'lead',
         'posted_at',
-        'posted_by',
-        'category',
+        'get_author',
+        'get_category',
         'is_featured'
     )
