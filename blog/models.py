@@ -87,19 +87,19 @@ class BlogPost(Page):
     is_featured = models.BooleanField(default=False)
 
     @property
-    def get_thumbnail_url(self):
+    def thumbnail_url(self):
         return self.thumbnail_image.get_rendition('original').url
 
     @property
-    def get_banner_url(self):
+    def banner_url(self):
         return self.banner_image.get_rendition('original').url
 
     @property
-    def get_category(self):
+    def post_category(self):
         return self.category.category
 
     @property
-    def get_author(self):
+    def author(self):
         return self.posted_by.email
     
     
@@ -121,12 +121,12 @@ class BlogPost(Page):
     ]
 
     api_fields = (
-        'get_thumbnail_url',
-        'get_banner_url',
+        'thumbnail_url',
+        'banner_url',
         'body',
         'lead',
         'posted_at',
-        'get_author',
-        'get_category',
+        'author',
+        'post_category',
         'is_featured'
     )
