@@ -3,7 +3,7 @@ Django==1.8.2
 wagtail==1.0b2
 
 # Recommended components (require additional setup):
-psycopg2==2.5.4
+# psycopg2==2.5.4
 # elasticsearch==1.1.1
 
 # Recommended components to improve performance in production:
