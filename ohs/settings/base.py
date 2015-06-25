@@ -78,25 +78,25 @@ WSGI_APPLICATION = 'ohs.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 # SQLite (simplest install)
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': join(PROJECT_ROOT, 'db.sqlite3'),
-#     }
-# }
-
-# PostgreSQL (Recommended, but requires the psycopg2 library and Postgresql development headers)
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': os.getenv('POSTGRES_USER', 'postgres'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST': 'db',
-        'PORT': 5432,
-        'CONN_MAX_AGE': 600,  # number of seconds database connections should persist for
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': join(PROJECT_ROOT, 'db.sqlite3'),
     }
 }
+
+# PostgreSQL (Recommended, but requires the psycopg2 library and Postgresql development headers)
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': os.getenv('POSTGRES_USER', 'postgres'),
+#         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+#         'HOST': 'db',
+#         'PORT': 5432,
+#         'CONN_MAX_AGE': 600,  # number of seconds database connections should persist for
+#     }
+# }
 
 
 # Internationalization
