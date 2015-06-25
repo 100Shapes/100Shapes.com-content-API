@@ -2,30 +2,112 @@ from django.db import models
 
 from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, MultiFieldPanel
+from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 
+from django.conf import settings
 
-class BlogPost(Page):
 
-    api_fields = ('date', 'title')
+###################
 
-    body = models.TextField()
-    date = models.DateField("Post date")
-    feed_image = models.ForeignKey(
-        'wagtailimages.Image',
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name='+'
+# BLOG CATEGORIES
+
+class BlogCategory(models.Model):
+    category = models.CharField(max_length=20)
+
+    def __unicode__(self):
+        return self.category
+
+    class Meta:
+        verbose_name_plural = "categories"
+
+    api_fields = (
+        'category',
     )
 
+
+
+###################
+
+# BLOG AUTHORS
+
+class BlogAuthor(Page):
+    email = models.EmailField()
+
+    @property
+    def name(self):
+        return self.title
+    
+    panels = [
+        FieldPanel('email', classname="full"),
+    ]
+
+    api_fields = (
+        'name',
+        'email',
+    )
+ 
+
+###################
+
+# BLOG POSTS
+
+class BlogPost(Page):
+    
+    body = models.TextField()
+    
+    posted_at = models.DateField('Post date')
+    
+    posted_by = models.ForeignKey(settings.AUTH_USER_MODEL, 
+        on_delete=models.PROTECT,
+        related_name="posts")
+    
+    category = models.ForeignKey('BlogCategory',
+        on_delete=models.PROTECT,
+        related_name="categories")
+    
+    lead = models.CharField(max_length=255)
+    
+    thumbnail_image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='+'
+    )
+    
+    banner_image = models.ForeignKey(
+        'wagtailimages.Image',
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='+'
+    )
+    
+    is_featured = models.BooleanField(default=False)
+
     content_panels = Page.content_panels + [
-        FieldPanel('date'),
         FieldPanel('body', classname="full"),
+        FieldPanel('lead', classname="full"),
+        FieldPanel('posted_by'),
+        FieldPanel('posted_at'),
+        FieldPanel('category'),
     ]
 
     promote_panels = [
         MultiFieldPanel(Page.promote_panels, "Common page configuration"),
-        ImageChooserPanel('feed_image'),
+        FieldPanel('is_featured'),
+        ImageChooserPanel('thumbnail_image'),
+        ImageChooserPanel('banner_image'),
     ]
+
+    api_fields = (
+        'thumbnail_image',
+        'banner_image',
+        'body',
+        'lead',
+        'posted_at',
+        'posted_by',
+        'category',
+        'is_featured'
+    )
