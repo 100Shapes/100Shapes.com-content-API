@@ -75,7 +75,7 @@ class BlogPost(Page):
         blank=True,
         related_name='+'
     )
-    
+
     banner_image = models.ForeignKey(
         'wagtailimages.Image',
         on_delete=models.SET_NULL,
@@ -86,6 +86,15 @@ class BlogPost(Page):
     
     is_featured = models.BooleanField(default=False)
 
+    @property
+    def get_thumbnail_url(self):
+        return self.thumbnail_image.get_rendition('original').url
+
+    @property
+    def get_banner_url(self):
+        return self.banner_image.get_rendition('original').url
+    
+    
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
         FieldPanel('lead', classname="full"),
@@ -102,8 +111,8 @@ class BlogPost(Page):
     ]
 
     api_fields = (
-        'thumbnail_image',
-        'banner_image',
+        'get_thumbnail_url',
+        'get_banner_url',
         'body',
         'lead',
         'posted_at',
