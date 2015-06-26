@@ -119,7 +119,7 @@ STATICFILES_FINDERS = (
 )
 
 MEDIA_ROOT = join(PROJECT_ROOT, 'public/media')
-MEDIA_URL = '/public/media/'
+MEDIA_URL = 'http://localhost:8000/public/media/'
 
 
 # Django compressor settings
