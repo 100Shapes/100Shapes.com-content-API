@@ -63,9 +63,24 @@ MEDIA_URL = '/media/'
 
 import logging
 
-LOGGING = {
+LOGGING = {  
     'version': 1,
-    'root': {'level': 'DEBUG' if DEBUG else 'INFO'},
+    'disable_existing_loggers': True,
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+        }
+    },
+    'loggers': {
+        'django': {
+            'propogate': True
+        }
+    },
+    'root': {
+        'handlers': ['console', ],
+        'level': 'INFO'
+    },
 }
 
 
