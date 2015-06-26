@@ -57,11 +57,14 @@ INSTALLED_APPS = (
     'wagtail.wagtailredirects',
     'wagtail.wagtailforms',
 
+    'corsheaders',
+
     'blog',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -116,7 +119,7 @@ STATICFILES_FINDERS = (
 )
 
 MEDIA_ROOT = join(PROJECT_ROOT, 'public/media')
-MEDIA_URL = '/public/media/'
+MEDIA_URL = 'http://localhost:8000/public/media/'
 
 
 # Django compressor settings
@@ -157,3 +160,16 @@ WAGTAIL_SITE_NAME = "ohs"
 
 # Whether to use face/feature detection to improve image cropping - requires OpenCV
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = False
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ORIGIN_WHITELIST = (
+    'localhost',
+    '100shapes.com'
+)
+
+CORS_ALLOW_METHODS = (
+    'GET',
+    'OPTIONS'
+)
+

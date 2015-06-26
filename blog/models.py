@@ -12,41 +12,21 @@ from django.conf import settings
 
 # BLOG CATEGORIES
 
-class BlogCategory(models.Model):
-    category = models.CharField(max_length=20)
-
-    def __unicode__(self):
-        return self.category
+class BlogCategory(Page):
+    description = models.TextField()
 
     class Meta:
+        verbose_name = "category"
         verbose_name_plural = "categories"
 
     api_fields = (
-        'category',
+        'title',
+        'description',
     )
 
-
-
-###################
-
-# BLOG AUTHORS
-
-class BlogAuthor(Page):
-    email = models.EmailField()
-
-    @property
-    def name(self):
-        return self.title
-    
-    panels = [
-        FieldPanel('email', classname="full"),
+    content_panels = Page.content_panels + [
+        FieldPanel('description', classname="full")
     ]
-
-    api_fields = (
-        'name',
-        'email',
-    )
- 
 
 ###################
 
@@ -87,27 +67,21 @@ class BlogPost(Page):
     is_featured = models.BooleanField(default=False)
 
     @property
-    def get_thumbnail_url(self):
+    def thumbnail_url(self):
         return self.thumbnail_image.get_rendition('original').url
 
     @property
-    def get_banner_url(self):
+    def banner_url(self):
         return self.banner_image.get_rendition('original').url
 
     @property
-    def get_category(self):
-        return self.category.category
-
-    @property
-    def get_author(self):
+    def author(self):
         return self.posted_by.email
     
     
-    
-    
     content_panels = Page.content_panels + [
-        FieldPanel('body', classname="full"),
         FieldPanel('lead', classname="full"),
+        FieldPanel('body', classname="full"),
         FieldPanel('posted_by'),
         FieldPanel('posted_at'),
         FieldPanel('category'),
@@ -121,12 +95,13 @@ class BlogPost(Page):
     ]
 
     api_fields = (
-        'get_thumbnail_url',
-        'get_banner_url',
+        'thumbnail_url',
+        'banner_url',
         'body',
+        'slug',
         'lead',
         'posted_at',
-        'get_author',
-        'get_category',
+        'author',
+        'category',
         'is_featured'
     )

@@ -16,29 +16,23 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='BlogAuthor',
-            fields=[
-                ('page_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('email', models.EmailField(max_length=254)),
-            ],
-            options={
-                'abstract': False,
-            },
-            bases=('wagtailcore.page',),
-        ),
-        migrations.CreateModel(
             name='BlogCategory',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('category', models.CharField(max_length=20)),
+                ('page_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
+                ('description', models.TextField()),
             ],
+            options={
+                'verbose_name': 'category',
+                'verbose_name_plural': 'categories',
+            },
+            bases=('wagtailcore.page',),
         ),
         migrations.CreateModel(
             name='BlogPost',
             fields=[
                 ('page_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
                 ('body', models.TextField()),
-                ('posted_at', models.DateField(auto_now_add=True, verbose_name=b'Post date')),
+                ('posted_at', models.DateField(verbose_name=b'Post date')),
                 ('lead', models.CharField(max_length=255)),
                 ('is_featured', models.BooleanField(default=False)),
                 ('banner_image', models.ForeignKey(related_name='+', on_delete=django.db.models.deletion.SET_NULL, blank=True, to='wagtailimages.Image', null=True)),
