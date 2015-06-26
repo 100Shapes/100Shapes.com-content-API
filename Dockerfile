@@ -36,13 +36,9 @@ RUN chmod -R 777 /home/app/public/
 
 ENV SECRET "TEMP"
 
-RUN python manage.py collectstatic --noinput
-
 VOLUME /home/app/public
 
-
-
-
+RUN python manage.py collectstatic --noinput
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
