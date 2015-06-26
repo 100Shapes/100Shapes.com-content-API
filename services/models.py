@@ -4,13 +4,21 @@ from wagtail.wagtailcore.models import Page
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
+from wagtailapi.utils import get_base_url
+import os
 
 from django.conf import settings
 
 
 ###################
 
-# BLOG POSTS
+# SERVICE SECTION
+
+
+
+###################
+
+# SERVICES
 
 class Service(Page):
     
@@ -39,11 +47,11 @@ class Service(Page):
 
     @property
     def thumbnail_url(self):
-        return self.thumbnail_image.get_rendition('original').url
+        return os.path.join(get_base_url(), self.thumbnail_image.get_rendition('original').url.strip("/"))
 
     @property
     def banner_url(self):
-        return self.banner_image.get_rendition('original').url
+        return os.path.join(get_base_url(), self.banner_image.get_rendition('original').url.strip("/"))
 
 
     content_panels = Page.content_panels + [
