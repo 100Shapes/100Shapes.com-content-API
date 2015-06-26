@@ -3,7 +3,7 @@ MAINTAINER 100 Shapes <paolo@100shapes.com>
 # Set correct environment variables.
 
 # ENV HOME /app
-ENV VIRTUAL_HOST proto.100shapes.com
+ENV VIRTUAL_HOST api.100shapes.com
 ENV PRODUCTION True
 
 # Use baseimage-docker's init process.
