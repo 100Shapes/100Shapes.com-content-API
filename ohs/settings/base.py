@@ -29,6 +29,8 @@ ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', [
     '.dockerhost'
 ])
 
+WAGTAILAPI_BASE_URL = os.getenv('VIRTUAL_HOST', "http://localhost:8000");
+
 
 # Application definition
 
@@ -119,7 +121,7 @@ STATICFILES_FINDERS = (
 )
 
 MEDIA_ROOT = join(PROJECT_ROOT, 'public/media')
-MEDIA_URL = 'http://localhost:8000/public/media/'
+MEDIA_URL = '/public/media/'
 
 
 # Django compressor settings

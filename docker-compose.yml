@@ -8,6 +8,7 @@ web:
   build: .
   environment:
     - SECRET='temp-key'
+    - VIRTUAL_HOST='dockerhost'
   ports:
     - "80:80"
   volumes:
