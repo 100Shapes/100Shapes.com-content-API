@@ -63,6 +63,7 @@ class Service(Page):
         'thumbnail_url',
         'banner_url',
         'body',
+        'search_description',
         'slug',
         'lead',
         'intro',
