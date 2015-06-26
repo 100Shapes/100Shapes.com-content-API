@@ -105,6 +105,7 @@ class BlogPost(Page):
         'lead',
         'posted_at',
         'author',
+        'seo_title',
         'category',
         'is_featured'
     )

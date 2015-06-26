@@ -62,6 +62,7 @@ INSTALLED_APPS = (
     'corsheaders',
 
     'blog',
+    'services',
 )
 
 MIDDLEWARE_CLASSES = (
