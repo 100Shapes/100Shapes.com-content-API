@@ -1,2 +1,2 @@
-# 100shapes.com-lithium
-100 Shapes site – "lithium"
+# 100Shapes.com-Lithium-
+"Lithium" release of 100Shapes.com
