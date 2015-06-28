@@ -5,6 +5,7 @@ from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtailapi.utils import get_base_url
+from modelcluster.fields import ParentalKey
 import os
 
 from django.conf import settings
@@ -14,15 +15,26 @@ from django.conf import settings
 
 # SERVICE SECTION
 
+class ServiceSection(models.Model):
+    page = ParentalKey('services.Service', related_name='content_sections')
+    body = models.TextField()
+    label = models.CharField(max_length=100, help_text="What's displayed in the nav? i.e. \"Benefits\"")
+    slug = models.SlugField(max_length=100)
+    
+    panels = [
+        FieldPanel('label'),
+        FieldPanel('slug'),
+        FieldPanel('body'),
+    ]
 
+
+    
 
 ###################
 
 # SERVICES
 
 class Service(Page):
-    
-    body = models.TextField()
     
     lead = models.CharField(max_length=255)
     intro = models.CharField(max_length=255)
@@ -57,7 +69,7 @@ class Service(Page):
     content_panels = Page.content_panels + [
         FieldPanel('lead', classname="full"),
         FieldPanel('intro', classname="full"),
-        FieldPanel('body', classname="full"),
+        InlinePanel('content_sections', label="Content Sections"),
     ]
 
     promote_panels = [
@@ -70,9 +82,11 @@ class Service(Page):
     api_fields = (
         'thumbnail_url',
         'banner_url',
-        'body',
+        'content_sections',
         'search_description',
         'slug',
+        'label',
+        'body', 
         'lead',
         'intro',
         'seo_title',
