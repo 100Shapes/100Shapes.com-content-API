@@ -36,6 +36,9 @@ RUN chmod -R 777 /home/app/public/
 
 ENV SECRET "TEMP"
 
+RUN mkdir -p /home/app/public/media
+RUN chmod -R 777 /home/app/public/media
+
 VOLUME /home/app/public
 
 RUN python manage.py collectstatic --noinput

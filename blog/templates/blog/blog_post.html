@@ -1,10 +1,84 @@
+{% load wagtailimages_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blog Preview Page</title>
-  <link rel="stylesheet" type="text/css" href="">
+    <title>Blog Preview Page</title>
+    <link rel="stylesheet" type="text/css" href="http://proto.100shapes.com/main.css">
 </head>
 <body>
-  {{ self.body | safe }}
+
+
+<article class="blog-post"
+         vocab="http://schema.org/"
+         typeof="NewsArticle">
+
+
+    <header class="pt++ mb++"
+            style="background-image: url({{ banner_url }});">
+
+        <div class="wrapper">
+            <div class="grid grid-align-center">
+                <div class="grid-item 1/1">
+                    <div class="box box-round bg--orange box--squared-bottom pt pb+ posr md-ph lg-ph+ xxl-ph++ tc">
+
+                        <span class="h4 mb db">
+                            UX &amp; Design
+                        </span>
+
+                        <hr class="1/6">
+
+                        <h1 class="ffs mt"
+                            property="headline"
+                            view-title>
+                            {{ self.seo_title }}
+                        </h1>
+
+                        <p subtitle
+                           property="alternativeHeadline"
+                           class="fz++">
+                            {{ self.lead }}
+                        </p>
+
+
+                        <div class="blog-post__meta posa mt-">
+
+                            <img class="profile"
+                                 src="http://proto.100shapes.com/5a9f4060895bc924e659e6456a01a296.jpg"
+                                 alt="Profile picture of {{ self.author.name }}"/>
+
+                            <div class="db mv-- fz-">
+
+                                <p itemprop="author" itemscope itemtype="http://schema.org/Person" class="m0">
+                                    <small class="ffs">by</small>
+                                    <span itemprop="name">{{ self.author.name }}</span>
+                                </p>
+
+                                <p itemprop="datePublished" content="{{ self.posted_at }}">
+                                    {{ self.posted_at }}
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+    {{ self.body | safe }}
+
+
+    <div class="wrapper">
+        <ohs-mailinglist-signup config="{ slim: true }"></ohs-mailinglist-signup>
+    </div>
+
+
+</article>
 </body>
 </html>
