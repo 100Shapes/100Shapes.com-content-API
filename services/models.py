@@ -1,7 +1,6 @@
 from django.db import models
 
 from wagtail.wagtailcore.models import Page, Orderable
-from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailcore.models import Site
@@ -38,7 +37,7 @@ class ServiceSection(Orderable, models.Model):
 class Service(Page):
 
     lead = models.CharField(max_length=255)
-    intro = RichTextField()
+    intro = models.TextField()
 
     thumbnail_image = models.ForeignKey(
         'wagtailimages.Image',
