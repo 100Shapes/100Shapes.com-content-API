@@ -4,8 +4,9 @@ from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
-from wagtailapi.utils import get_base_url
+from wagtail.wagtailcore.models import Site
 from modelcluster.fields import ParentalKey
+
 import os
 
 from django.conf import settings
@@ -59,11 +60,11 @@ class Service(Page):
 
     @property
     def thumbnail_url(self):
-        return os.path.join(settings.WAGTAILAPI_BASE_URL, self.thumbnail_image.get_rendition('original').url.strip(":/"))
+        return os.path.join(Site.objects.first().root_url, self.thumbnail_image.get_rendition('original').url.strip(":/"))
 
     @property
     def banner_url(self):
-        return os.path.join(settings.WAGTAILAPI_BASE_URL, self.banner_image.get_rendition('original').url.strip(":/"))
+        return os.path.join(Site.objects.first().root_url, self.banner_image.get_rendition('original').url.strip(":/"))
 
     content_panels = Page.content_panels + [
         FieldPanel('lead', classname="full"),
