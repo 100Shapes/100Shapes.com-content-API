@@ -59,11 +59,11 @@ class Service(Page):
 
     @property
     def thumbnail_url(self):
-        return os.path.join(get_base_url(), self.thumbnail_image.get_rendition('original').url.strip(":/"))
+        return os.path.join(settings.WAGTAILAPI_BASE_URL, self.thumbnail_image.get_rendition('original').url.strip(":/"))
 
     @property
     def banner_url(self):
-        return os.path.join(get_base_url(), self.banner_image.get_rendition('original').url.strip(":/"))
+        return os.path.join(settings.WAGTAILAPI_BASE_URL, self.banner_image.get_rendition('original').url.strip(":/"))
 
     content_panels = Page.content_panels + [
         FieldPanel('lead', classname="full"),
