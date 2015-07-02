@@ -21,7 +21,7 @@
 
       <aside class="box box-round posf service-page__secondary-nav" role="navigation">
           <ol class="list-bare">
-            {% for content_section in self.content_sections %}
+            {% for content_section in self.content_sections.all %}
               <li>
                   <a href="#{{ content_section.slug}}">
                       {{ content_section.label }}
@@ -31,7 +31,7 @@
           </ol>
       </aside>
 
-      <header class="bg--blue bg--overlay pt++ pb mb+" style="background-image: url({{ self.banner_url }})">
+      <header class="bg--blue bg--overlay pt++ pb mb+"{% if self.banner_image %} style="background-image: url({{ self.banner_url }})"{% endif %}>
           <div class="wrapper">
               <div class="grid">
                   <div class="grid-item 1/1 lg-2/3 pr+">
@@ -67,10 +67,10 @@
 
                               </a>
 
-                              <a href="{{vm.company.email.target}}"
+                              <a href="#"
                                  class="btn db btn-primary btn-round btn-lg tl mb">
 
-                                  <ohs-icon name="{{vm.company.email.icon_sm}}"
+                                  <ohs-icon name="#"
                                             class="fl mr- is-sm"></ohs-icon>
 
                                   hi@100shapes.com
@@ -98,7 +98,7 @@
       </header>
 
       <div class="posr">
-          {% for content_section in self.content_sections %}
+          {% for content_section in self.content_sections.all %}
           <div id="{{ content_section.slug }}">
 
               {{ content_section.body | safe }}

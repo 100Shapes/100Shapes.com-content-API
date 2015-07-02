@@ -1,6 +1,6 @@
 from django.db import models
 
-from wagtail.wagtailcore.models import Page
+from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailcore.fields import RichTextField
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
@@ -15,12 +15,12 @@ from django.conf import settings
 
 # SERVICE SECTION
 
-class ServiceSection(models.Model):
+class ServiceSection(Orderable, models.Model):
     page = ParentalKey('services.Service', related_name='content_sections')
     body = models.TextField()
     label = models.CharField(max_length=100, help_text="What's displayed in the nav? i.e. \"Benefits\"")
     slug = models.SlugField(max_length=100)
-    
+
     panels = [
         FieldPanel('label'),
         FieldPanel('slug'),
@@ -28,17 +28,17 @@ class ServiceSection(models.Model):
     ]
 
 
-    
+
 
 ###################
 
 # SERVICES
 
 class Service(Page):
-    
+
     lead = models.CharField(max_length=255)
     intro = models.CharField(max_length=255)
-    
+
     thumbnail_image = models.ForeignKey(
         'wagtailimages.Image',
         on_delete=models.SET_NULL,
@@ -54,7 +54,7 @@ class Service(Page):
         blank=True,
         related_name='+'
     )
-    
+
     is_featured = models.BooleanField(default=False)
 
     @property
@@ -86,7 +86,7 @@ class Service(Page):
         'search_description',
         'slug',
         'label',
-        'body', 
+        'body',
         'lead',
         'intro',
         'seo_title',
