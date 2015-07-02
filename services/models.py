@@ -37,7 +37,7 @@ class ServiceSection(Orderable, models.Model):
 class Service(Page):
 
     lead = models.CharField(max_length=255)
-    intro = models.CharField(max_length=255)
+    intro = RichTextField()
 
     thumbnail_image = models.ForeignKey(
         'wagtailimages.Image',
