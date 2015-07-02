@@ -65,7 +65,6 @@ class Service(Page):
     def banner_url(self):
         return os.path.join(get_base_url(), self.banner_image.get_rendition('original').url.strip("/"))
 
-
     content_panels = Page.content_panels + [
         FieldPanel('lead', classname="full"),
         FieldPanel('intro', classname="full"),
