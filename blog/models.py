@@ -80,6 +80,10 @@ class BlogPost(Page):
     @property
     def author(self):
         return self.posted_by.email
+
+    @property
+    def category_title(self):
+        return self.category.title
     
     
     content_panels = Page.content_panels + [
@@ -107,6 +111,7 @@ class BlogPost(Page):
         'posted_at',
         'author',
         'seo_title',
+        'category_title',
         'category',
         'is_featured'
     )
