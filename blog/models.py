@@ -1,14 +1,12 @@
 from django.db import models
 
-from wagtail.wagtailcore.models import Page
-from wagtail.wagtailcore.fields import RichTextField
+from wagtail.wagtailcore.models import Page, Orderable
 from wagtail.wagtailadmin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.wagtailimages.edit_handlers import ImageChooserPanel
 from wagtail.wagtailcore.models import Site
 from wagtailapi.utils import get_base_url
 
 from django.conf import settings
-
 
 ###################
 
@@ -52,6 +50,8 @@ class BlogPost(Page):
 
     lead = models.CharField(max_length=255)
 
+    related_posts = models.ManyToManyField("self", blank=True, null=True)
+
     thumbnail_image = models.ForeignKey(
         'wagtailimages.Image',
         on_delete=models.SET_NULL,
@@ -69,6 +69,17 @@ class BlogPost(Page):
     )
 
     is_featured = models.BooleanField(default=False)
+
+    @property
+    def related_items(self):
+        items = []
+        for item in self.related_posts.all():
+            items.append({'id': item.id, 'title': item.title, 'slug': item.slug, 'thumbnail_url':item.thumbnail_url})
+        return items
+
+    @property
+    def thumbnail_url(self):
+        return os.path.join(Site.objects.first().root_url, self.thumbnail_image.get_rendition('original').url.strip("/"))
 
     @property
     def thumbnail_url(self):
@@ -93,6 +104,7 @@ class BlogPost(Page):
         FieldPanel('posted_by'),
         FieldPanel('posted_at'),
         FieldPanel('category'),
+        FieldPanel('related_posts'),
     ]
 
     promote_panels = [
@@ -114,5 +126,6 @@ class BlogPost(Page):
         'seo_title',
         'category_title',
         'category',
-        'is_featured'
+        'is_featured',
+        'related_items'
     )
