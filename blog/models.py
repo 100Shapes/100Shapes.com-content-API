@@ -28,6 +28,9 @@ class BlogCategory(Page):
         FieldPanel('description', classname="full")
     ]
 
+    def get_sitemap_urls(self):
+        return []
+
 ###################
 
 # BLOG POSTS
