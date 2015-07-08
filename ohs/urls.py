@@ -13,6 +13,7 @@ from wagtail.wagtailcore import urls as wagtail_urls
 
 
 from wagtailapi import urls as wagtailapi_urls
+from wagtail.contrib.wagtailsitemaps.views import sitemap
 
 
 urlpatterns = patterns('',
@@ -24,6 +25,7 @@ urlpatterns = patterns('',
     url(r'^images/', include(wagtailimages_urls)),
 
     url(r'^api/', include(wagtailapi_urls)),
+    url('^sitemap\.xml$', sitemap),
 
     url(r'', include(wagtail_urls)),
 )

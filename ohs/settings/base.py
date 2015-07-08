@@ -58,11 +58,13 @@ INSTALLED_APPS = (
     'wagtail.wagtailsearch',
     'wagtail.wagtailredirects',
     'wagtail.wagtailforms',
+    'wagtail.contrib.wagtailsitemaps',
 
     'corsheaders',
 
     'blog',
     'services',
+    'landing_pages',
 )
 
 MIDDLEWARE_CLASSES = (
