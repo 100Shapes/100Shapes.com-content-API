@@ -1,0 +1,30 @@
+{
+  "name": "100shapes-hapi-content",
+  "version": "0.0.1",
+  "description": "A Hapi server to serve our YML content",
+  "main": "server.js",
+  "dependencies": {
+    "hapi": "^8.8.0",
+    "lodash": "^3.10.0",
+    "yaml-to-json": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/100Shapes/100Shapes.com-content-API.git"
+  },
+  "keywords": [
+    "Hapi",
+    "API"
+  ],
+  "author": "Paolo Memoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/100Shapes/100Shapes.com-content-API/issues"
+  },
+  "homepage": "https://github.com/100Shapes/100Shapes.com-content-API#readme"
+}
