@@ -24,11 +24,7 @@ RUN npm install
 
 ADD . /home/app/
 
-ENV PRODUCTION True
-ENV API_BASE_URL='"http://proto-api.100shapes.com/"'
-
-
-ENV VIRTUAL_HOST proto.100shapes.com
+ENV VIRTUAL_HOST proto.api.100shapes.com
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down

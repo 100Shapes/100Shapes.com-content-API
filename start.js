@@ -14,11 +14,12 @@ function getFolderAtLevel (file_path, level){
 
 module.exports = function(server) {
   server.start(function () {
+    console.log('Using base url: ' + server.app.base_url)
+    console.log('Using content From: ' + server.app.content_path)
     var metalsmith = Metalsmith(__dirname)
 
       .source(server.app.content_path)
-
-      .destination("./public")
+      .destination("public")
 
       .use(prefixoid([{
         prefix: server.app.base_url,
@@ -74,7 +75,7 @@ module.exports = function(server) {
 
           if ('title' in item){ // Check to see if the current metalsmith 'file' has a title
             item.contents = String(item.contents); // Fixed encoding to ascii number buffer
-            item.absolute_url = path.join(server.app.base_url, folder_name, item.slug); // Make absolute_url
+            item.absolute_url = path.join(server.app.base_url,folder_name, item.slug); // Make absolute_url
 
             // Find any image properties and make them absolute
             _.forOwn(item, function(value, key) {
