@@ -4,14 +4,14 @@
   "description": "A Hapi server to serve our YML content",
   "main": "app.js",
   "dependencies": {
+    "cheerio": "^0.19.0",
     "hapi": "^8.8.0",
+    "joi": "^6.6.1",
     "lodash": "^3.10.0",
     "metalsmith": "^1.6.0",
     "metalsmith-html-minifier": "^1.1.0",
     "metalsmith-ignore": "^0.1.2",
-    "metalsmith-paths": "^2.0.1",
-    "metalsmith-prefixoid": "0.0.3",
-    "metalsmith-slug": "0.0.5"
+    "metalsmith-paths": "^2.0.1"
   },
   "devDependencies": {},
   "scripts": {

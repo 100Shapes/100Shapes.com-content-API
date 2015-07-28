@@ -1,11 +1,11 @@
 var path = require('path')
 var _ = require('lodash');
+var url = require('url')
+var cheerio = require('cheerio');
 
 var Metalsmith = require('metalsmith');
 
 var htmlMinifier = require("metalsmith-html-minifier");
-var slug = require('metalsmith-slug');
-var prefixoid = require('metalsmith-prefixoid');
 var ignore = require('metalsmith-ignore');
 
 function getFolderAtLevel (file_path, level){
@@ -18,40 +18,34 @@ module.exports = function(server) {
     console.log('Using content From: ' + server.app.content_path)
     var metalsmith = Metalsmith(__dirname)
 
-      .source(server.app.content_path)
-      .destination("public")
+    .source(server.app.content_path)
+    .destination("public")
 
-      .use(prefixoid([{
-        prefix: server.app.base_url,
-        selector: 'img',
-        attr: 'src'
-      },{
-        prefix: server.app.base_url,
-        selector: 'link',
-        attr: 'href'
-      },{
-        prefix: server.app.base_url,
-        selector: 'script',
-        attr: 'src'
-      }]))
+    .use(htmlMinifier()) // Use the default options
 
-      .use(slug({
-          patterns: ['*.html', '*.md', '*.rst'],
-          lower: true
-      }))
+    .use(load)
 
-      .use(htmlMinifier()) // Use the default options
+    .use(ignore('**/index.html'))
 
-      .use(load)
-
-      .use(ignore('**/index.html'))
-
-      .build(function(err){
+    .build(function(err){
         if (err) throw err;
-      });
+    });
 
     console.log('Server running at:', server.info.uri);
   });
+
+  function make_links_absoulte(contents, relative_path){
+    $ = cheerio.load(contents.toString());
+    $('img').each(function(i, elem) {
+        var src = url.parse(elem.attribs.src);
+        if (src.protocol == null) {
+            var absolute_url = url.resolve(server.app.base_url, path.join(relative_path, src.href));
+            elem.attribs.src = absolute_url;
+        }
+    });
+    return $.html();
+  };
+
 
   function load(files, metalsmith, done){
 
@@ -74,20 +68,22 @@ module.exports = function(server) {
         if (getFolderAtLevel(file_path,0) == folder_name){  // Loop over all metalsmith 'files'
 
           if ('title' in item){ // Check to see if the current metalsmith 'file' has a title
-            item.contents = String(item.contents); // Fixed encoding to ascii number buffer
-            item.absolute_url = path.join(server.app.base_url,folder_name, item.slug); // Make absolute_url
+            item.slug = getFolderAtLevel(file_path,1);
+            item.absolute_url = url.resolve(server.app.base_url, path.join(folder_name, item.slug))
+            item.contents = make_links_absoulte(item.contents, path.join(folder_name, item.slug));
 
             // Find any image properties and make them absolute
             _.forOwn(item, function(value, key) {
               if( key.indexOf('_image') >= 0){
-                item[key] = path.join(item.absolute_url, value)
+
+                item[key] = url.resolve(server.app.base_url, path.join(folder_name,item.slug, value));
               }
             });
 
             server.app.content[folder_name].items.push(item) // Add metalsmith 'file' to server's 'content' object
             console.log('loaded  ----' + item.title);
           } else { // is therefore static
-            console.log('loaded  ------(static)' + file_path);
+            console.log('loaded  ------(static)-' + file_path);
           }
         }
       });
