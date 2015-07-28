@@ -1,7 +1,12 @@
 var Hapi = require('hapi');
 
 var server = new Hapi.Server();
-server.connection({ port: 3000 });
+server.connection({
+    port: 3000,
+    routes: {
+        cors: true
+    }
+});
 
 
 server.app.base_url = process.env['VIRTUAL_HOST'] ? ('http://' + process.env['VIRTUAL_HOST']) : 'http://localhost:3000';
