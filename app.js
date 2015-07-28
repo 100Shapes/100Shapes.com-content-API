@@ -12,8 +12,9 @@ server.connection({
 });
 
 
-server.app.base_url = process.env['VIRTUAL_HOST'] ? ('http://' + process.env['VIRTUAL_HOST']) : 'http://localhost:3000';
+server.app.base_url = process.env['VIRTUAL_HOST'] ? ('http://' + process.env['VIRTUAL_HOST'] +'/v1') : 'http://localhost:3000';
 server.app.content_path = process.env['CONTENT_PATH'] || 'content';
+server.app.version = "v1"
 
 server.app.ignoreFromList = ['contents', 'mode'];
 server.app.content = {};

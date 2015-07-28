@@ -69,14 +69,14 @@ module.exports = function(server) {
 
           if ('title' in item){ // Check to see if the current metalsmith 'file' has a title
             item.slug = getFolderAtLevel(file_path,1);
-            item.absolute_url = url.resolve(server.app.base_url, path.join(folder_name, item.slug))
-            item.contents = make_links_absoulte(item.contents, path.join(folder_name, item.slug));
+            item.absolute_url = url.resolve(server.app.base_url, path.join(server.app.version,folder_name, item.slug))
+            item.contents = make_links_absoulte(item.contents, path.join(server.app.version,folder_name, item.slug));
 
             // Find any image properties and make them absolute
             _.forOwn(item, function(value, key) {
               if( key.indexOf('_image') >= 0){
 
-                item[key] = url.resolve(server.app.base_url, path.join(folder_name,item.slug, value));
+                item[key] = url.resolve(server.app.base_url, path.join(server.app.version,folder_name,item.slug, value));
               }
             });
 
