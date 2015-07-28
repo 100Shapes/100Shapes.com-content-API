@@ -1,9 +1,9 @@
 var Joi = require('joi');
 
-module.exports = function(server) {
+module.exports = function(server, feed) {
     server.route({
         method: 'GET',
-        path: '/v1',
+        path: '/',
         handler: function(request, reply) {
             server.methods.getFolders(function(err, folders) {
                 if (err) {
@@ -17,7 +17,7 @@ module.exports = function(server) {
 
     server.route({
         method: 'GET',
-        path: '/v1/{folder_name}/{item_name}',
+        path: '/{folder_name}/{item_name}',
         handler: function(request, reply) {
             server.methods.getFolderItem(request.params.folder_name, request.params.item_name, function(err, item) {
                 if (err) {
@@ -39,7 +39,7 @@ module.exports = function(server) {
 
     server.route({
         method: 'GET',
-        path: '/v1/{folder_name}',
+        path: '/{folder_name}',
         handler: function(request, reply) {
             var requested = {
                 folder: request.params.folder_name,
@@ -61,6 +61,20 @@ module.exports = function(server) {
                     featured: Joi.boolean()
                 }
             }
+        }
+    });
+    server.route({
+        method: 'GET',
+        path: '/sitemap.xml',
+        handler: function(request, reply) {
+            reply(server.app.sitemap.toString()).code(200);
+        }
+    });
+    server.route({
+        method: 'GET',
+        path: '/feed.rss',
+        handler: function(request, reply) {
+            reply(server.app.feed.xml()).code(200);
         }
     });
 }

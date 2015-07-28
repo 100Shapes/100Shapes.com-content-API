@@ -1,5 +1,6 @@
 var _ = require('lodash');
 
+
 module.exports = function(server) {
   server.method('getFolders', function (next) {
     return next(null, _.keys(server.app.content));
