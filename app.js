@@ -20,7 +20,7 @@ server.app.base_url = process.env['VIRTUAL_HOST'] ? ('http://' + process.env['VI
 server.app.frontend_url = process.env['FRONTEND_URL'] || 'http://frontend.100shapes.com';
 
 
-server.app.ignoreFromList = ['contents', 'mode'];
+server.app.ignoreFromList = ['contents', 'mode', 'stats'];
 server.app.content = {};
 
 server.start(function () {
