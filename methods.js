@@ -53,7 +53,7 @@ module.exports = function(server) {
     );
 
     server.method('getFolderItem', function(folder_name, item_name, next) {
-        if (!_.has(server.app.content, [requested.folder])) {
+        if (!_.has(server.app.content, [folder_name])) {
             return next('No item found');
         }
         var item = _.find(server.app.content[folder_name].items, 'slug', item_name);
