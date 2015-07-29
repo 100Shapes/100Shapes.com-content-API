@@ -36,7 +36,7 @@ module.exports = function(server) {
         console.log('Server running at:', server.info.uri);
     });
 
-    function make_links_absoulte(contents, relative_path) {
+    function make_links_absolute(contents, relative_path) {
         $ = cheerio.load(contents.toString());
         $('img').each(function(i, elem) {
             var src = url.parse(elem.attribs.src);
@@ -63,16 +63,16 @@ module.exports = function(server) {
             // Add a 'folder' to server's 'content' object
             server.app.content[folder_name] = {};
             server.app.content[folder_name].items = [];
+            server.app.content[folder_name].meta = [];
             console.log('loaded --' + folder_name);
 
             _.forOwn(files, function(item, file_path) { // Loop over all metalsmith 'files'
 
                 if (getFolderAtLevel(file_path, 0) == folder_name) { // Loop over all metalsmith 'files'
-
                     if ('title' in item) { // Check to see if the current metalsmith 'file' has a title
                         item.slug = getFolderAtLevel(file_path, 1);
                         item.absolute_url = url.resolve(server.app.base_url, path.join(folder_name, item.slug))
-                        item.contents = make_links_absoulte(item.contents, path.join(folder_name, item.slug));
+                        item.contents = make_links_absolute(item.contents, path.join(folder_name, item.slug));
                         item.frontend_url = url.resolve(server.app.frontend_url, path.join(folder_name, item.slug))
                         item.guid = md5(item.slug);
 
@@ -81,7 +81,7 @@ module.exports = function(server) {
                             url: item.frontend_url
                         });
 
-                        if (folder_name == "blogs") {
+                        if (folder_name == "blog") {
                             server.app.feed.item({
                                 title: item.title,
                                 description: item.contents,
@@ -102,9 +102,13 @@ module.exports = function(server) {
 
                         server.app.content[folder_name].items.push(item) // Add metalsmith 'file' to server's 'content' object
                         console.log('loaded  ----' + item.title);
-                    } else { // is therefore static
+                    } else if (getFolderAtLevel(file_path, 1) == 'meta.html') { // is therefore static
+                        server.app.content[folder_name].meta = item // add metalsmith 'file' to folder's meta
+                        console.log('loaded  ----' + folder_name + '-META');
+                    } else {
                         console.log('loaded  ------(static)-' + file_path);
                     }
+                    server.app.content[folder_name].meta.count = _.size(server.app.content[folder_name].items)
                 }
             });
         });

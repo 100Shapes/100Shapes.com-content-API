@@ -21,19 +21,12 @@ module.exports = function(server, feed) {
         handler: function(request, reply) {
             server.methods.getFolderItem(request.params.folder_name, request.params.item_name, function(err, item) {
                 if (err) {
-                    console.log(err);
+                    console.log(err, request.params.folder_name, request.params.item_name);
+                    reply(err).code(404);
                 } else {
                     reply(item).code(200);
                 }
             })
-        },
-        config: {
-            validate: {
-                query: {
-                    limit: Joi.number().integer(),
-                    featured: Joi.boolean()
-                }
-            }
         }
     });
 
@@ -44,11 +37,14 @@ module.exports = function(server, feed) {
             var requested = {
                 folder: request.params.folder_name,
                 limit: request.query.limit,
-                featured: request.query.featured
+                featured: request.query.featured,
+                meta: request.query.meta,
+                random: request.query.random
             };
             server.methods.getFolder(requested, function(err, folder_items) {
                 if (err) {
-                    console.log(err);
+                    console.log(err, requested.folder);
+                    reply(err).code(404);
                 } else {
                     reply(folder_items).code(200);
                 }
@@ -58,7 +54,9 @@ module.exports = function(server, feed) {
             validate: {
                 query: {
                     limit: Joi.number().integer(),
-                    featured: Joi.boolean()
+                    featured: Joi.boolean(),
+                    meta: Joi.boolean(),
+                    random: Joi.boolean()
                 }
             }
         }
