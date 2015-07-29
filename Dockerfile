@@ -3,8 +3,6 @@ MAINTAINER 100 Shapes <paolo@100shapes.com>
 # Set correct environment variables.
 
 # ENV HOME /app
-ENV VIRTUAL_HOST api.100shapes.com
-ENV PRODUCTION True
 
 # Use baseimage-docker's init process.
 CMD ["/sbin/my_init"]
@@ -12,48 +10,29 @@ CMD ["/sbin/my_init"]
 #   Build system and git.
 RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
+RUN /pd_build/nodejs.sh
 
-RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
-
-RUN apt-get -y install libpq-dev python-dev python-pip postgresql-server-dev-all libxml2-dev libxslt1-dev \
-    && apt-get -y build-dep pillow \
-    && apt-get -y autoremove
-
-ADD requirements.txt /home/app/
-
+ADD package.json /home/app/
 
 WORKDIR /home/app/
 
-RUN pip install psycopg2
-RUN pip install -r requirements.txt
+RUN npm install -g npm
+
+RUN npm install
 
 ADD . /home/app/
 
-WORKDIR /home/app/
+RUN chown -R app /home/app/
 
-RUN mkdir -p /home/app/public/
-RUN chmod -R 777 /home/app/public/
-
-ENV SECRET "TEMP"
-
-RUN mkdir -p /home/app/public/media
-RUN chmod -R 777 /home/app/public/media
-
-VOLUME /home/app/public
-
-RUN python manage.py collectstatic --noinput
+ENV VIRTUAL_HOST proto.api.100shapes.com
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
 RUN rm /etc/nginx/sites-enabled/default
-ADD env.conf /etc/nginx/main.d/env.conf
 ADD nginx.conf /etc/nginx/sites-enabled/nginx.conf
-
+ADD env.conf /etc/nginx/main.d/node-env.conf
 
 # Clean up APT when done.
-
-# RUN python manage.py migrate
-
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 80
