@@ -58,12 +58,14 @@ module.exports = function(server) {
         }
         var item = _.find(server.app.content[folder_name].items, 'slug', item_name);
         return next(null, item);
-    }, {
-        cache: {
-            expiresIn: 60 * 60 * 1000
-        },
-        generateKey: function(opts) {
-            return JSON.stringify(opts);
-        }
-    });
+    }
+    // , {
+    //     cache: {
+    //         expiresIn: 60 * 60 * 1000
+    //     },
+    //     generateKey: function(opts) {
+    //         return JSON.stringify(opts);
+    //     }
+    // }
+    );
 };
