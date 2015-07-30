@@ -12,7 +12,13 @@ RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
-ADD package.json /home/app/
+WORKDIR /tmp
+
+RUN git clone https://github.com/100Shapes/100Shapes.com-content-API.git app
+
+RUN mkdir -p /home/app
+
+RUN cp app/package.json /home/app/
 
 WORKDIR /home/app/
 
@@ -20,7 +26,7 @@ RUN npm install -g npm
 
 RUN npm install
 
-ADD . /home/app/
+RUN cp -r /tmp/app/* /home/app/
 
 RUN chown -R app /home/app/
 
