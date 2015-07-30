@@ -27,9 +27,14 @@ module.exports = function(server) {
             folder[items_name] = [];
             server.app.content[requested.folder].items.forEach(function(item) {
                 item_meta = _.omit(item, server.app.ignoreFromList)
-                if (requested.featured == item_meta.featured) {
+                if (typeof requested.featured !== 'undefined') {
+                    if (requested.featured == item_meta.featured) {
+                        folder[items_name].push(item_meta);
+                    }
+                } else {
                     folder[items_name].push(item_meta);
                 }
+
             });
             if (requested.random == true) {
                 console.log('random')
