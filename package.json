@@ -16,6 +16,9 @@
     "rss": "^1.1.1",
     "sitemap": "^0.9.0"
   },
+  "scripts": {
+    "start": "node app.js"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
