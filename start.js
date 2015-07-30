@@ -3,7 +3,7 @@ var _ = require('lodash');
 var url = require('url')
 var cheerio = require('cheerio');
 var fs = require('fs');
-var md5 = require('MD5');
+var md5 = require('md5');
 
 var Metalsmith = require('metalsmith');
 

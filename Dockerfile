@@ -12,23 +12,12 @@ RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
-WORKDIR /tmp
-
-RUN git clone https://github.com/100Shapes/100Shapes.com-content-API.git app
-
-RUN mkdir -p /home/app
-
-RUN cp app/package.json /home/app/
-
-WORKDIR /home/app/
-
 RUN npm install -g npm
 
-RUN npm install
+RUN mkdir -p /etc/my_init.d
+ADD update-content.sh /etc/my_init.d/update-content.sh
 
-RUN cp -r /tmp/app/* /home/app/
-
-RUN chown -R app /home/app/
+RUN /etc/my_init.d/update-content.sh
 
 ENV VIRTUAL_HOST proto.api.100shapes.com
 
