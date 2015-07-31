@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="81px" viewBox="0 0 80 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 101 Copy 5 + basketball</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-930.000000, -6554.000000)">
+            <g id="Rectangle-101-Copy-5-+-basketball" sketch:type="MSLayerGroup" transform="translate(930.000000, 6554.540777)">
+                <rect id="Rectangle-101-Copy-5" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
+                <path d="M46.241593,40.1240227 C46.241593,52.3373091 36.3391526,62.2443583 24.1221791,62.2443583 C11.9015187,62.2443583 2,52.3373091 2,40.1240227 C2,27.9052057 11.9015187,18 24.1221791,18 C36.3391526,18 46.241593,27.9052057 46.241593,40.1240227 L46.241593,40.1240227 L46.241593,40.1240227 Z M15.5461477,19.7209212 C15.5461477,19.7209212 10.6261736,36.5712724 37.9656448,56.4844742 M5.21601179,51.6174165 C5.21509003,51.6174165 11.0470495,22.7055719 43.7344127,29.8906713 M36.2202459,21.6077587 C36.2202459,21.6077587 22.0777211,20.0776413 24.996927,29.9266198 C27.9124458,39.7737548 44.3280245,44.3465936 45.8433938,44.3180191 M2,41.6034434 C2,41.6034434 7.20700791,34.2459753 11.2194182,39.2649447 C15.2327502,44.2802271 14.4372735,51.4837616 12.7237263,59.0827302" id="basketball" stroke="#215CFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(24.120797, 40.122179) rotate(85.000000) translate(-24.120797, -40.122179) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

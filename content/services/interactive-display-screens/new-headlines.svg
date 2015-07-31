@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="82px" height="81px" viewBox="0 0 82 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 101 + headlines</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-528.000000, -6048.000000)">
+            <g id="Rectangle-101-+-headlines" sketch:type="MSLayerGroup" transform="translate(530.000000, 6048.343911)">
+                <rect id="Rectangle-101" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
+                <g id="headlines" transform="translate(0.000000, 14.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7.99408078,0 L49.4303621,0 L49.4303621,44.8981129 L7.99408078,44.8981129 L7.99408078,0 L7.99408078,0 Z M42.4303621,51.8981129 L0.99408078,51.8981129 L0.99408078,7 M16.7448623,23.2025612 L23.7448623,23.2025612 L16.7448623,23.2025612 L16.7448623,23.2025612 Z M16.7448623,29.7829409 L23.7448623,29.7829409 L16.7448623,29.7829409 L16.7448623,29.7829409 Z M16.7448623,36.3633206 L23.7448623,36.3633206 L16.7448623,36.3633206 L16.7448623,36.3633206 Z M30.4216378,22.6193754 L41.3575282,22.6193754 L41.3575282,37.6193754 L30.4216378,37.6193754 L30.4216378,22.6193754 L30.4216378,22.6193754 Z" id="Imported-Layers-Copy" stroke="#215CFF"></path>
+                    <path d="M15.7383316,7.02149947 L41.7383316,7.02149947 L41.7383316,14.5537487 L15.7383316,14.5537487 L15.7383316,7.02149947 Z" id="Path-Copy-3" stroke="#FFD605"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

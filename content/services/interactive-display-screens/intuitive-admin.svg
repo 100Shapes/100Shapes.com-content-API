@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 5 Copy 2 + moderate + Oval Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-930.000000, -1573.000000)">
+            <g id="Rectangle-5-Copy-2-+-moderate-+-Oval-Copy" sketch:type="MSLayerGroup" transform="translate(930.000000, 1573.000000)">
+                <rect id="Rectangle-5-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
+                <g id="moderate-+-Oval-Copy" transform="translate(19.000000, 18.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3.67780554,24.2354785 L3.67780554,42.9531027 L3.67780554,24.2354785 Z M3.67780554,0 L3.67780554,11.4345495 L3.67780554,0 Z M39.6131703,27.5783032 L39.6131703,43.5798824 L39.6131703,27.5783032 Z M39.6131703,0 L39.6131703,14.1505945 L39.6131703,0 Z M39.6131703,20.8926539 C41.4593613,20.8926539 42.9559949,19.3960204 42.9559949,17.5498293 C42.9559949,15.7036382 41.4593613,14.2070047 39.6131703,14.2070047 C37.7669792,14.2070047 36.2703457,15.7036382 36.2703457,17.5498293 C36.2703457,19.3960204 37.7669792,20.8926539 39.6131703,20.8926539 Z M3.67780554,18.3855355 C5.5239966,18.3855355 7.02063016,16.8889019 7.02063016,15.0427108 C7.02063016,13.1965198 5.5239966,11.6998862 3.67780554,11.6998862 C1.83161447,11.6998862 0.334980907,13.1965198 0.334980907,15.0427108 C0.334980907,16.8889019 1.83161447,18.3855355 3.67780554,18.3855355 Z" id="moderate" stroke="#215CFF"></path>
+                    <path d="M21.5,28 C23.4329966,28 25,26.4329966 25,24.5 C25,22.5670034 23.4329966,21 21.5,21 C19.5670034,21 18,22.5670034 18,24.5 C18,26.4329966 19.5670034,28 21.5,28 Z M21.2276348,0 L21.2276348,20.940707 L21.2276348,0 Z M21.2276348,34.2639524 L21.2276348,43.4754191 L21.2276348,34.2639524 Z" id="Oval-Copy" stroke="#FFD605"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
