@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>maze-wars copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="maze-wars-copy" sketch:type="MSArtboardGroup" stroke="#215CFF" stroke-width="4" stroke-linecap="round">
+            <path d="M26.2668861,27.2222222 L36.7857455,27.2222222 M36.7857455,39.1428571 L26.2668861,39.1428571" id="Rectangle-431-Copy" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M37.5789474,23.9918031 C37.5789474,23.4440454 37.9346378,23.2552269 38.3905337,23.5823567 L42.1884136,26.3075393 C42.6366404,26.629166 43,27.344692 43,27.8902467 L43,37.8641373 C43,38.4166157 42.6443096,39.1358305 42.200105,39.4746971 L38.3788424,42.389791 C37.9370726,42.7268001 37.5789474,42.5446944 37.5789474,42.0081969 L37.5789474,23.9918031 Z" id="Rectangle-431-Copy-3" sketch:type="MSShapeGroup" transform="translate(40.289474, 32.990697) scale(-1, 1) translate(-40.289474, -32.990697) "></path>
+            <path d="M49.4811406,12.2716753 C49.4811406,11.7193616 49.8423047,11.5323183 50.292892,11.8575613 L61.1882485,19.7220479 C61.6365665,20.0456527 62,20.7542267 62,21.3127555 L62,42.6869364 C62,43.2418551 61.6253354,43.932218 61.1591633,44.2314728 L50.3219772,51.188302 C49.857596,51.4864071 49.4811406,51.2737243 49.4811406,50.7280166 L49.4811406,12.2716753 Z" id="Rectangle-431-Copy-5" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(55.740570, 31.510607) scale(-1, 1) translate(-55.740570, -31.510607) "></path>
+            <path d="M43,23 L49,23" id="Line" sketch:type="MSShapeGroup"></path>
+            <path d="M43,43 L49,43" id="Line-Copy" sketch:type="MSShapeGroup"></path>
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(14.000000, 31.500000) scale(-1, 1) translate(-14.000000, -31.500000) translate(1.000000, 11.000000)">
+                <path d="M0.845833433,12.9918031 C0.845833433,12.4440454 1.20152384,12.2552269 1.65741979,12.5823567 L5.45529971,15.3075393 C5.90352648,15.629166 6.26688606,16.344692 6.26688606,16.8902467 L6.26688606,26.8641373 C6.26688606,27.4166157 5.91119566,28.1358305 5.46699108,28.4746971 L1.64572842,31.389791 C1.20395862,31.7268001 0.845833433,31.5446944 0.845833433,31.0081969 L0.845833433,12.9918031 Z" id="Rectangle-431-Copy-4" sketch:type="MSShapeGroup" transform="translate(3.556360, 21.990697) scale(-1, 1) translate(-3.556360, -21.990697) "></path>
+                <path d="M12.7480266,1.27167535 C12.7480266,0.719361583 13.1091907,0.532318299 13.5597781,0.857561274 L24.4551346,8.72204785 C24.9034526,9.04565273 25.2668861,9.75422673 25.2668861,10.3127555 L25.2668861,31.6869364 C25.2668861,32.2418551 24.8922215,32.932218 24.4260494,33.2314728 L13.5888633,40.188302 C13.124482,40.4864071 12.7480266,40.2737243 12.7480266,39.7280166 L12.7480266,1.27167535 Z" id="Rectangle-431-Copy-6" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(19.007456, 20.510607) scale(-1, 1) translate(-19.007456, -20.510607) "></path>
+                <path d="M6.26688609,12 L12.2668861,12" id="Line-Copy-2" sketch:type="MSShapeGroup"></path>
+                <path d="M6.26688609,32 L12.2668861,32" id="Line-Copy-3" sketch:type="MSShapeGroup"></path>
+            </g>
+            <path d="M1.5,52 L63,52" id="Line" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

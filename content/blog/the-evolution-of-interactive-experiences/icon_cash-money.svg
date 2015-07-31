@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_money</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_money" sketch:type="MSArtboardGroup" stroke="#215CFF" stroke-width="4">
+            <path d="M4.22334913,23.5 L59.7766509,23.5 L59.7766509,50.5 L4.22334913,50.5 L4.22334913,23.5 Z M10.1499579,23.5 C10.122215,26.7495118 7.47940985,29.375171 4.22334913,29.375171 L4.22334913,23.5 L10.1499736,23.5 L10.1499579,23.5 Z M59.7766509,29.3705494 C59.6982892,29.3736209 59.6195368,29.375171 59.5404223,29.375171 C56.2843616,29.375171 53.6415564,26.7495118 53.6138135,23.5 L59.7766509,23.5 L59.7766509,29.3705494 Z M10.1280593,50.0951894 C10.1311308,50.0168278 10.132681,49.9380753 10.132681,49.8589609 C10.132681,46.6787166 7.62787359,44.0835014 4.48346176,43.9385182 L4.48346176,50.0951894 L10.1280593,50.0951894 Z M59.7766509,44.8554024 C59.6982892,44.8523309 59.6195368,44.8507808 59.5404223,44.8507808 C56.360178,44.8507808 53.7649628,47.3555882 53.6199796,50.5 L59.7766509,50.5 L59.7766509,44.8554024 Z M45.3818857,36.9483418 L54.2721296,36.9483418 L45.3818857,36.9483418 Z M10.4794467,36.9483418 L19.3696906,36.9483418 L10.4794467,36.9483418 Z" id="note-copy" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <circle id="Oval-87" sketch:type="MSShapeGroup" cx="32" cy="37" r="6"></circle>
+            <path d="M8,24 L8,17 L56,17 L56,24" id="Rectangle-435" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M14,18 L14,11 L51,11 L51,18" id="Rectangle-435-Copy" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
