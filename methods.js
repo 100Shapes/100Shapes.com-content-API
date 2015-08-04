@@ -37,7 +37,6 @@ module.exports = function(server) {
 
             });
             if (requested.random == true) {
-                console.log('random')
                 folder[items_name] = _.shuffle(folder[items_name]);
             } else {
                 folder[items_name] = _.sortBy(folder[items_name], 'date');
