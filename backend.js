@@ -70,7 +70,7 @@ module.exports = function(server, feed) {
     });
     server.route({
         method: 'GET',
-        path: '/feed.rss',
+        path: '/rss.xml',
         handler: function(request, reply) {
             reply(server.app.feed.xml()).code(200);
         }
