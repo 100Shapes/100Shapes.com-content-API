@@ -2,66 +2,68 @@ var _ = require('lodash');
 
 module.exports = function(server) {
     server.method('getFolders', function(next) {
-            return next(null, _.keys(server.app.content));
-        }
-        // , {
-        //     cache: {
-        //         expiresIn: 60 * 60 * 1000
-        //     },
-        //     generateKey: function(opts) {
-        //         return JSON.stringify(opts);
-        //     }
-        // }
-    );
+        return next(null, _.keys(server.app.content));
+    });
 
-    server.method('getFolder', function(requested, next) {
-        if (!_.has(server.app.content, [requested.folder])) {
+    server.method('getFolder', function(folder_name, query, next) {
+        if (!_.has(server.app.content, [folder_name])) {
             return next('No folder found');
         }
         var folder = {};
         folder.meta = {};
+        folder.meta = _.omit(server.app.content[folder_name].meta, server.app.ignoreFromList)
 
-        folder.meta = _.omit(server.app.content[requested.folder].meta, server.app.ignoreFromList)
-        if (requested.meta != true) {
-            var items_name = 'items'
+        if (query.meta != true) {
+            var items_name = 'items';
             folder[items_name] = [];
-            server.app.content[requested.folder].items.forEach(function(item) {
-                item_meta = _.omit(item, server.app.ignoreFromList)
-                if (typeof requested.featured !== 'undefined') {
-                    if (requested.featured == item_meta.featured) {
-                        folder[items_name].push(item_meta);
-                    }
-                } else {
-                    folder[items_name].push(item_meta);
-                }
 
-            });
-
-            if (requested.random == true) {
-                folder[items_name] = _.shuffle(folder[items_name]);
-            } else {
-                folder[items_name] = _.sortBy(folder[items_name], 'date');
-                folder[items_name] = folder[items_name].reverse()
+            // Pull out reserved queries
+            var limit = parseInt(query.limit);
+            var random = false;
+            if (_.has(query, 'random')) {
+                random = query['random'];
+            }
+            var draft = false;
+            if (_.has(query, 'draft')) {
+                draft = query['draft'];
             }
 
-            folder[items_name] = _.filter(folder[items_name], function(item) {
-              return item.draft == requested.draft;
+            query = _.omit(query, ['limit', 'random', 'draft']);
+
+            // Convert queries
+            _.forEach(query, function(n, key) {
+              if (_.indexOf(server.app.content[folder_name].meta.types.boolean, key) > -1) {
+                    query[key] = (n.toLowerCase() != 'false');
+                } else if (_.indexOf(server.app.content[folder_name].meta.types.number, key)> -1) {
+                    query[key] = Number(n);
+                }
             });
 
-            folder[items_name] = folder[items_name].slice(0, requested.limit);
+            // Filter items by coverted query
+            folder[items_name] = _.filter(server.app.content[folder_name].items, query)
 
+            // Sane Defaults
+            if (draft) {
+              folder[items_name] = _.filter(folder[items_name], 'draft', true)
+            } else {
+              folder[items_name] = _.reject(folder[items_name], 'draft', true)
+            }
+
+            // Sort returned items
+            if (random != true) {
+                folder[items_name] = _.sortBy(folder[items_name], '-date');
+            } else {
+                folder[items_name] = _.shuffle(folder[items_name]);
+            }
+
+            // Slice array down to size
+            if (!isNaN(limit)){
+              folder[items_name] = folder[items_name].slice(0, limit);
+            }
         }
+
         return next(null, folder);
-    }
-    // , {
-    //     cache: {
-    //         expiresIn: 60 * 60 * 1000
-    //     },
-    //     generateKey: function(opts) {
-    //         return JSON.stringify(opts);
-    //     }
-    // }
-    );
+    });
 
     server.method('getFolderItem', function(folder_name, item_name, next) {
         if (!_.has(server.app.content, [folder_name])) {
@@ -69,14 +71,5 @@ module.exports = function(server) {
         }
         var item = _.find(server.app.content[folder_name].items, 'slug', item_name);
         return next(null, item);
-    }
-    // , {
-    //     cache: {
-    //         expiresIn: 60 * 60 * 1000
-    //     },
-    //     generateKey: function(opts) {
-    //         return JSON.stringify(opts);
-    //     }
-    // }
-    );
+    });
 };

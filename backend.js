@@ -34,33 +34,13 @@ module.exports = function(server, feed) {
         method: 'GET',
         path: '/{folder_name}',
         handler: function(request, reply) {
-            var requested = {
-                folder: request.params.folder_name,
-                limit: request.query.limit,
-                featured: request.query.featured,
-                meta: request.query.meta,
-                draft: request.query.draft,
-                random: request.query.random
-            };
-            server.methods.getFolder(requested, function(err, folder_items) {
+            server.methods.getFolder(request.params.folder_name, request.query, function(err, folder_items) {
                 if (err) {
-                    console.log(err, requested.folder);
                     reply(err).code(404);
                 } else {
                     reply(folder_items).code(200);
                 }
             })
-        },
-        config: {
-            validate: {
-                query: {
-                    limit: Joi.number().integer(),
-                    featured: Joi.boolean(),
-                    meta: Joi.boolean(),
-                    draft: Joi.boolean().default(false),
-                    random: Joi.boolean()
-                }
-            }
         }
     });
     server.route({
