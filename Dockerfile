@@ -12,15 +12,21 @@ RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
+RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.7/ep-linux && chmod +x /usr/local/bin/ep
+
 RUN npm install -g npm
 
 RUN mkdir -p /etc/my_init.d
 ADD update-content.sh /etc/my_init.d/update-content.sh
 
+
+RUN ep /etc/my_init.d/update-content.sh
+
 RUN /etc/my_init.d/update-content.sh
 
 ENV VIRTUAL_HOST proto.api.100shapes.com
 ENV FRONTEND_URL http://100shapes.com
+ENV BRANCH draft
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down

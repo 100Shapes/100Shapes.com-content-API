@@ -39,6 +39,7 @@ module.exports = function(server, feed) {
                 limit: request.query.limit,
                 featured: request.query.featured,
                 meta: request.query.meta,
+                draft: request.query.draft,
                 random: request.query.random
             };
             server.methods.getFolder(requested, function(err, folder_items) {
@@ -56,6 +57,7 @@ module.exports = function(server, feed) {
                     limit: Joi.number().integer(),
                     featured: Joi.boolean(),
                     meta: Joi.boolean(),
+                    draft: Joi.boolean().default(false),
                     random: Joi.boolean()
                 }
             }

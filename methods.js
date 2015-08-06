@@ -36,13 +36,20 @@ module.exports = function(server) {
                 }
 
             });
+
             if (requested.random == true) {
                 folder[items_name] = _.shuffle(folder[items_name]);
             } else {
                 folder[items_name] = _.sortBy(folder[items_name], 'date');
                 folder[items_name] = folder[items_name].reverse()
             }
+
+            folder[items_name] = _.filter(folder[items_name], function(item) {
+              return item.draft == requested.draft;
+            });
+
             folder[items_name] = folder[items_name].slice(0, requested.limit);
+
         }
         return next(null, folder);
     }
