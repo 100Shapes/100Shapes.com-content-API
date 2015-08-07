@@ -12,24 +12,21 @@ RUN /pd_build/utilities.sh
 RUN /pd_build/python.sh
 RUN /pd_build/nodejs.sh
 
+RUN apt-get update && apt-get install -y -o Dpkg::Options::="--force-confold" passenger nginx-extras
 RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases/download/v0.0.7/ep-linux && chmod +x /usr/local/bin/ep
 
 RUN npm install -g npm
 
 RUN mkdir -p /etc/my_init.d
-
 ADD update-content.sh /etc/my_init.d/update-content.sh
 
 ENV BRANCH staging
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-content-API.git
 
-RUN ep /etc/my_init.d/update-content.sh
-
-RUN /etc/my_init.d/update-content.sh
-
 ENV VIRTUAL_HOST stage.api.100shapes.com
 ENV FRONTEND_URL http://100shapes.com
 
+RUN ["/etc/my_init.d/update-content.sh", "fresh"]
 
 # Enable nginx
 RUN rm -f /etc/service/nginx/down
