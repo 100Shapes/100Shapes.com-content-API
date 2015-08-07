@@ -20,14 +20,14 @@ RUN mkdir -p /etc/my_init.d
 
 ADD update-content.sh /etc/my_init.d/update-content.sh
 
-ENV BRANCH drafts
+ENV BRANCH staging
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-content-API.git
 
 RUN ep /etc/my_init.d/update-content.sh
 
 RUN /etc/my_init.d/update-content.sh
 
-ENV VIRTUAL_HOST proto.api.100shapes.com
+ENV VIRTUAL_HOST stage.api.100shapes.com
 ENV FRONTEND_URL http://100shapes.com
 
 
