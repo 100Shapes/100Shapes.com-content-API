@@ -49,7 +49,6 @@ module.exports = function(server) {
               folder[items_name] = _.reject(folder[items_name], 'draft', true)
             }
 
-            console.log(random, (!random))
             // Sort returned items
             if (random != true) {
                 folder[items_name] = _.sortBy(folder[items_name], '-date');
