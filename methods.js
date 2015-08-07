@@ -21,11 +21,11 @@ module.exports = function(server) {
             var limit = parseInt(query.limit);
             var random = false;
             if (_.has(query, 'random')) {
-                random = query['random'];
+                random = (query['random'].toLowerCase() != 'false');
             }
             var draft = false;
             if (_.has(query, 'draft')) {
-                draft = query['draft'];
+                draft = (query['draft'].toLowerCase() != 'false');
             }
 
             query = _.omit(query, ['limit', 'random', 'draft']);
@@ -49,6 +49,7 @@ module.exports = function(server) {
               folder[items_name] = _.reject(folder[items_name], 'draft', true)
             }
 
+            console.log(random, (!random))
             // Sort returned items
             if (random != true) {
                 folder[items_name] = _.sortBy(folder[items_name], '-date');
