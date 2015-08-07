@@ -1,6 +1,5 @@
 #!/bin/sh
 echo "Injecting Enviroment Variables"
-# ep /etc/nginx/sites-enabled/nginx.conf
 ep /etc/my_init.d/update-content.sh
 
 if [ $1 = "fresh" ]; then
@@ -9,6 +8,7 @@ if [ $1 = "fresh" ]; then
     echo "Cloning content from branch: ${BRANCH:-master}@${GIT_URL}"
     git clone --depth 1 -b ${BRANCH:-master} ${GIT_URL} /home/app
 else
+    ep /etc/nginx/sites-enabled/nginx.conf
     cd /home/app/
     echo "Pulling content from branch: ${BRANCH:-master}@${GIT_URL}"
     git pull
