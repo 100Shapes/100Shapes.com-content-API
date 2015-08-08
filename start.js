@@ -73,7 +73,7 @@ module.exports = function(server) {
                         item.slug = getFolderAtLevel(file_path, 1);
                         item.absolute_url = url.resolve(server.app.base_url, path.join(folder_name, item.slug))
                         item.contents = make_links_absolute(item.contents, path.join(folder_name, item.slug));
-                        item.frontend_url = url.resolve(server.app.frontend_url, path.join(folder_name, item.slug))
+                        item.frontend_url = url.resolve(server.app.frontend_url, path.join(folder_name, item.slug, '/'))
                         item.guid = md5(item.slug);
 
                         // Add items sitemap and RSS feeds
