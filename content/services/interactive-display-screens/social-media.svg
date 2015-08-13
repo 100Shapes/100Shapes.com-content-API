@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="82px" height="81px" viewBox="0 0 82 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 101 Copy + loudspeaker + shout</title>
+    <title>icon_social-media</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-928.000000, -6048.000000)">
-            <g id="Rectangle-101-Copy-+-loudspeaker-+-shout" sketch:type="MSLayerGroup" transform="translate(930.000000, 6048.343911)">
-                <rect id="Rectangle-101-Copy" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
-                <g id="loudspeaker-+-shout" transform="translate(0.000000, 19.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round">
-                    <path d="M31.9830812,33.0417633 C31.6393003,33.0417633 31.3087844,32.8781161 31.0954413,32.5837785 C30.9042063,32.3212612 26.2880365,26.1526723 15.7071034,26.1526723 M15.7071034,9.11632083 C26.2880365,9.11632083 30.9042063,2.94773196 31.0954413,2.68521463 C31.3806357,2.29314331 31.8824894,2.13176902 32.3301782,2.28632468 C32.7822887,2.44088033 33.0884858,2.87386345 33.0884858,3.36253206 L33.0884858,31.9053246 C33.0884858,32.3962661 32.7822887,32.8315221 32.3279674,32.9849413 C32.2152162,33.0235803 32.0980433,33.0417633 31.9830812,33.0417633 L31.9830812,33.0417633 M5.68661049,26.1526723 C2.63900993,26.1526723 0.159587346,23.6036405 0.159587346,20.4704792 L0.159587346,14.798514 C0.159587346,11.6653527 2.63900993,9.11632083 5.68661049,9.11632083 L15.5943522,9.11632083 M15.6573602,26.1526723 L5.68661049,26.1526723 M13.3901753,40.8650068 C13.1613566,40.8650068 12.9325378,40.7922747 12.7357758,40.6434013 C7.3268748,36.5520973 5.92467872,29.1746544 5.57616732,26.2757588 M12.5634851,26.2085947 C13.0232888,32.6339591 17.090379,35.6279525 17.1341808,35.6601179 C17.4038995,35.8533124 17.5763427,36.1601509 17.6039778,36.4965367 C17.6316129,36.834059 17.5111238,37.1658991 17.2756726,37.4022783 L14.165064,40.5399853 C13.9506155,40.7559087 13.6720535,40.8650068 13.3901753,40.8650068 M17.7881896,9.58095112 L17.7881896,26.0628764" id="loudspeaker" stroke="#215CFF" stroke-linejoin="round"></path>
-                    <path d="M39.9736191,10.0401297 L56.1387147,0.889331642 M39.9736191,17.3607682 L56.1387147,17.3607682 M56.1387147,33.8322048 L39.9736191,24.6814067" id="shout" stroke="#FFD605"></path>
-                </g>
-            </g>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_social-media" sketch:type="MSArtboardGroup" stroke-width="4" stroke-linecap="round">
+            <path d="M16,17.3930288 L16,14.0029268 C16,11.2398866 18.231557,9 21.0093855,9 L55.9906145,9 C58.7572217,9 61,11.2426503 61,13.9960486 L61,37.0039514 C61,39.7631929 58.7533351,42 56.0012645,42 L55,42" id="Rectangle-318" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M56.258715,39.3819526 L55.7823733,49.6759304 L50.125519,44.0190761" id="Rectangle-319" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(53.192117, 44.528941) scale(-1, 1) rotate(-315.000000) translate(-53.192117, -44.528941) "></path>
+            <path d="M13,39 L31.4508365,39" id="Path-Copy-37" stroke="#FFD605" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+            <path d="M13,31 L37.5958918,31" id="Path-Copy-24" stroke="#FFD605" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
+            <path d="M42.9350786,18.4632696 L6.51924084,18.4632696 C4.57561779,18.4632696 3,20.0368995 3,21.9794055 L3,47.8028386 C3,49.7447468 3,51.3454577 7.66525163,51.3454577 M15.4447715,51.3189745 L42.9350786,51.3189745 C44.8787017,51.3189745 46.4543195,49.7453446 46.4543195,47.8028386 L46.4543195,21.9794055 C46.4543195,20.0374973 44.8820854,18.4632696 42.9350786,18.4632696 M7.76937653,51.483074 L7.76937653,56.6361787 C7.76937653,58.0896578 8.59919173,58.4381202 9.63118829,57.4061236 L15.3165381,51.483074" id="speech_bubbles-copy" stroke="#FFD605" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

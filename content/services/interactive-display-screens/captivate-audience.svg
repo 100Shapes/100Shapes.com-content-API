@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_captivate-audience</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_captivate-audience" sketch:type="MSArtboardGroup" stroke-linecap="round" stroke-width="3" stroke-linejoin="round">
+            <g id="Group" sketch:type="MSLayerGroup" transform="translate(33.500000, 31.500000) rotate(-180.000000) translate(-33.500000, -31.500000) translate(20.000000, 5.000000)">
+                <path d="M18.9666628,7.83687722 C8.57702138,7.83687722 0.978796043,16.2593457 0.978796043,26.6489871 C0.978796043,37.0386285 8.57702138,45.4610969 18.9666628,45.4610969" id="Oval-69" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+                <path d="M4,17.0671753 L4,36.4065566" id="Line-Copy-2" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+                <path d="M9,1.2666979 L9,51.8242431" id="Line" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+                <path d="M6.03333724,0.0909410371 C6.03333724,0.0909410371 26.021204,3.61821163 26.021204,27.133349 C26.021204,50.6484863 6.03333724,53 6.03333724,53" id="Line-Copy" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>

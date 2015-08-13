@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 5 Copy 3 + Imported Layers + Path</title>
+    <title>icon_story-you-want</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-530.000000, -1573.000000)">
-            <g id="Rectangle-5-Copy-3-+-Imported-Layers-+-Path" sketch:type="MSLayerGroup" transform="translate(530.000000, 1573.000000)">
-                <rect id="Rectangle-5-Copy-3" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
-                <g id="Imported-Layers-+-Path" transform="translate(16.000000, 16.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M13.545,21.93 L8.266,27.211 L2.984,21.93 L13.545,21.93 L13.545,21.93 Z M27.327,3.731 C27.327,3.731 8.266,3.754 8.266,27.211 M33.416,15.086 L48.5,15.086 L48.5,0 L33.416,0 L33.416,15.086 L33.416,15.086 Z" id="Imported-Layers" stroke="#215CFF"></path>
-                    <path d="M0.5,48.039 L15.585,48.039 L15.585,32.953 L0.5,32.953 L0.5,48.039 L0.5,48.039 Z M21.676,44.271 C21.676,44.271 40.737,44.249 40.737,20.791 M35.455,26.073 L40.737,20.791 L46.018,26.073 L35.455,26.073 L35.455,26.073 Z" id="Path" stroke="#FFD605"></path>
-                </g>
-            </g>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_story-you-want" sketch:type="MSArtboardGroup" stroke="#215CFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10,5 L58.6420392,5 L58.6420392,57.7058824 L10,57.7058824 L10,5 L10,5 Z M4,57.7058824 L4,11.8341961 L4,57.7058824 L4,57.7058824 Z M17.6407843,14.4478431 L51.6407843,14.4478431 M17.6407843,21.4478431 L43.6407843,21.4478431 M44.3596863,31.0130196 L51.3596863,31.0130196 L44.3596863,31.0130196 M17.3596863,31.0130196 L24.3596863,31.0130196 L17.3596863,31.0130196 L17.3596863,31.0130196 Z M31,31 L38,31 L31,31 L31,31 Z M44.3596863,47.0130196 L51.3596863,47.0130196 L44.3596863,47.0130196 L44.3596863,47.0130196 Z M17.3596863,47.0130196 L24.3596863,47.0130196 L17.3596863,47.0130196 L17.3596863,47.0130196 Z M44.3596863,39.0130196 L51.3596863,39.0130196 L44.3596863,39.0130196 L44.3596863,39.0130196 Z M17.3596863,39.0130196 L24.3596863,39.0130196 L17.3596863,39.0130196 L17.3596863,39.0130196 Z M30.6360784,38.7377255 L38.1358431,38.7377255 L38.1358431,47.0498824 L30.6360784,47.0498824 L30.6360784,38.7377255 L30.6360784,38.7377255 Z" id="Imported-Layers" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

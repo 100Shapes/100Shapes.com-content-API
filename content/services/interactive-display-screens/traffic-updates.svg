@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="82px" height="81px" viewBox="0 0 82 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 101 Copy 2 + conestripes + cone</title>
+    <title>icon_traffic-update</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-528.000000, -6308.000000)">
-            <g id="Rectangle-101-Copy-2-+-conestripes-+-cone" sketch:type="MSLayerGroup" transform="translate(530.000000, 6308.343911)">
-                <rect id="Rectangle-101-Copy-2" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
-                <g id="conestripes-+-cone" transform="translate(0.000000, 14.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M32,42 L9,42 M11,33 L30,33" id="conestripes" stroke="#FFD605"></path>
-                    <path d="M37,50.046875 L5,50.046875 L21,0.046875 L37,50.046875 Z M0.5,50.5 L41,50" id="cone" stroke="#215CFF"></path>
-                </g>
-            </g>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_traffic-update" sketch:type="MSArtboardGroup" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M43.5,49.5 L20.5,49.5" id="conestripes" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M22.5,40.5 L41.5,40.5" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M12,57.5 L52.5,57" id="cone" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M48.5,57.046875 L16.5,57.046875 L32.5,7.046875 L48.5,57.046875 Z" id="Path" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
         </g>
     </g>
 </svg>

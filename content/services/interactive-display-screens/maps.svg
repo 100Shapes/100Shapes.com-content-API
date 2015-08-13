@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
-    <title>Rectangle 101 Copy 9 + maps</title>
+    <title>line_maps</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Interactive-Display" sketch:type="MSArtboardGroup" transform="translate(-929.000000, -6805.000000)">
-            <g id="Rectangle-101-Copy-9-+-maps" sketch:type="MSLayerGroup" transform="translate(930.000000, 6805.796776)">
-                <rect id="Rectangle-101-Copy-9" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="80" height="80"></rect>
-                <g id="maps" transform="translate(1.000000, 15.000000)" stroke-width="4" sketch:type="MSShapeGroup" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M32.321,48.62 L48.319,40.983 L48.319,0.62 L32.321,8.253 L32.321,48.62 L32.321,48.62 Z M16.318,0.62 L0.319,8.253 L0.319,48.62 C0.319,48.62 8.18067767,45.5690096 12.6824457,43.821946 M16.318,15.3139216 L16.318,0.62 L32.321,8.253 L32.321,48.62 L19.8836671,43.6341275" id="Stroke-2" stroke="#215CFF"></path>
-                    <path d="M27.521,26.628 C27.521,32.815 16.316,48.62 16.316,48.62 C16.316,48.62 5.117,32.815 5.117,26.628 C5.117,20.443 10.133,15.423 16.316,15.423 C22.505,15.423 27.521,20.443 27.521,26.628 L27.521,26.628 Z M20.2179138,25.9378026 C20.2179138,28.0939643 18.4750959,29.8376505 16.3163291,29.8376505 C14.1662459,29.8376505 12.4190862,28.0939643 12.4190862,25.9378026 C12.4190862,23.7842459 14.1662459,22.0353495 16.3163291,22.0353495 C18.4750959,22.0353495 20.2179138,23.7842459 20.2179138,25.9378026 L20.2179138,25.9378026 Z" id="marker" stroke="#FFD605"></path>
-                </g>
-            </g>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="line_maps" sketch:type="MSArtboardGroup" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M39.821,55.12 L55.819,47.483 L55.819,7.12 L39.821,14.753 L39.821,55.12 L39.821,55.12 Z" id="Stroke-2" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M23.818,7.12 L7.819,14.753 L7.819,55.12 C7.819,55.12 15.6806777,52.0690096 20.1824457,50.321946" id="Path" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M23.818,21.8139216 L23.818,7.12 L39.821,14.753 L39.821,55.12 L27.3836671,50.1341275" id="Path" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M27.7179138,32.4378026 C27.7179138,34.5939643 25.9750959,36.3376505 23.8163291,36.3376505 C21.6662459,36.3376505 19.9190862,34.5939643 19.9190862,32.4378026 C19.9190862,30.2842459 21.6662459,28.5353495 23.8163291,28.5353495 C25.9750959,28.5353495 27.7179138,30.2842459 27.7179138,32.4378026 L27.7179138,32.4378026 Z" id="marker" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M35.021,33.128 C35.021,39.315 23.816,55.12 23.816,55.12 C23.816,55.12 12.617,39.315 12.617,33.128 C12.617,26.943 17.633,21.923 23.816,21.923 C30.005,21.923 35.021,26.943 35.021,33.128 L35.021,33.128 Z" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
         </g>
+        <rect id="Rectangle-365" stroke="#D0011B" stroke-width="3" sketch:type="MSShapeGroup" x="-25" y="-179" width="2119" height="277"></rect>
     </g>
 </svg>
