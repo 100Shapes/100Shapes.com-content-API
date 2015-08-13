@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_establishing-vision copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_establishing-vision-copy-2" sketch:type="MSArtboardGroup" stroke-width="3">
+            <rect id="Rectangle-403-Copy" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(17.500000, 54.000000) rotate(-180.000000) translate(-17.500000, -54.000000) " x="12" y="51" width="11" height="6"></rect>
+            <rect id="Rectangle-403-Copy-2" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(17.500000, 48.000000) rotate(-180.000000) translate(-17.500000, -48.000000) " x="14" y="45" width="7" height="6"></rect>
+            <path d="M7,45 L10,11 L25,11 L28,45" id="Rectangle-403-Copy-5" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(17.500000, 28.000000) rotate(-180.000000) translate(-17.500000, -28.000000) "></path>
+            <rect id="Rectangle-403-Copy-8" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(47.500000, 54.000000) rotate(-180.000000) translate(-47.500000, -54.000000) " x="42" y="51" width="11" height="6"></rect>
+            <path d="M27,34 L38,34" id="Rectangle-403-Copy-9" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(32.500000, 34.500000) rotate(-180.000000) translate(-32.500000, -34.500000) "></path>
+            <path d="M36,21 L29,21" id="Path" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M9.5,38.5 L24,38.5" id="Line" stroke="#215CFF" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <path d="M40.5,38.5 L55,38.5" id="Line-Copy" stroke="#215CFF" stroke-linecap="square" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-403-Copy-3" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(47.500000, 48.000000) rotate(-180.000000) translate(-47.500000, -48.000000) " x="44" y="45" width="7" height="6"></rect>
+            <path d="M37,45 L40,11 L55,11 L58,45" id="Rectangle-403-Copy-7" stroke="#215CFF" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(47.500000, 28.000000) rotate(-180.000000) translate(-47.500000, -28.000000) "></path>
+            <rect id="Rectangle-403-Copy-4" stroke="#FFD605" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(17.500000, 8.000000) rotate(-180.000000) translate(-17.500000, -8.000000) " x="6" y="5" width="23" height="6"></rect>
+            <rect id="Rectangle-403-Copy-6" stroke="#FFD605" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(47.500000, 8.000000) rotate(-180.000000) translate(-47.500000, -8.000000) " x="36" y="5" width="23" height="6"></rect>
+        </g>
+        <rect id="Rectangle-365" stroke="#D0011B" stroke-width="3" sketch:type="MSShapeGroup" x="-949" y="-25" width="2119" height="277"></rect>
+    </g>
+</svg>

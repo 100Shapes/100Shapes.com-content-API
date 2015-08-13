@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>line_job-done</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="line_job-done" sketch:type="MSArtboardGroup" stroke-width="3">
+            <path d="M13.0334278,27.6047587 C13.0334278,26.5024039 13.9230109,25.6087687 15.0244787,25.6087687 L19.354877,25.6087687 C20.454504,25.6087687 21.3459278,26.5039694 21.3459278,27.6047587 L21.3459278,58.4127787 C21.3459278,59.5151335 20.4563447,60.4087687 19.354877,60.4087687 L15.0244787,60.4087687 C13.9248516,60.4087687 13.0334278,59.513568 13.0334278,58.4127787 L13.0334278,27.6047587 Z" id="Rectangle-310" stroke="#215CFF" sketch:type="MSShapeGroup" transform="translate(17.189678, 43.008769) rotate(-315.000000) translate(-17.189678, -43.008769) "></path>
+            <path d="M31.0876856,30.4871573 L31.0876856,19.6888134" id="Rectangle-310-Copy" stroke="#215CFF" sketch:type="MSShapeGroup" transform="translate(31.511793, 25.087985) rotate(-315.000000) translate(-31.511793, -25.087985) "></path>
+            <path d="M34.0876856,35.4871573 L34.0876856,24.6888134" id="Rectangle-310-Copy-2" stroke="#215CFF" sketch:type="MSShapeGroup" transform="translate(34.511793, 30.087985) rotate(-315.000000) translate(-34.511793, -30.087985) "></path>
+            <path d="M48.561824,4.30378294 L48.561824,18.7037829 L39.061824,18.7037829 L39.061824,13.9037829 C30.749324,13.9037829 22.436824,19.9037829 22.436824,19.9037829 C22.436824,19.9037829 23.624324,4.30378294 48.561824,4.30378294 Z" id="Rectangle-311" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(35.499324, 12.103783) rotate(-315.000000) translate(-35.499324, -12.103783) "></path>
+            <path d="M43.4211169,20.3145477 C43.4211169,20.3145477 45.1175455,21.5145477 49.0193312,21.5145477 C52.9211169,21.5145477 55.2961169,19.1145477 55.2961169,19.1145477 L55.2961169,31.1145477 C55.2961169,31.1145477 52.9211169,28.7145477 49.0193312,28.7145477 C45.1175455,28.7145477 43.4211169,29.9145477 43.4211169,29.9145477 L43.4211169,20.3145477 Z" id="Rectangle-312" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(49.358617, 25.114548) rotate(-315.000000) translate(-49.358617, -25.114548) "></path>
+            <path d="M58,48 L58,59 L58,48 Z" id="Rectangle-313" stroke="#FFD605" stroke-linecap="round" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
+            <path d="M55,47 L61,47" id="Line" stroke="#FFD605" stroke-linecap="round" sketch:type="MSShapeGroup"></path>
+        </g>
+        <rect id="Rectangle-365" stroke="#D0011B" stroke-width="3" sketch:type="MSShapeGroup" x="-641" y="-179" width="2119" height="277"></rect>
+    </g>
+</svg>

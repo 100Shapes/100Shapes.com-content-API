@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_clear-view</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_clear-view" sketch:type="MSArtboardGroup" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32.4039156,14.7729094 C23.5151204,20.1950538 17.8521953,34.1605238 17.6326861,45.3871073 L12,45.3871073 L12,53.000399 L52.6341146,53.000399 L52.6341146,45.3871073 L24.2117594,45.3871073 C24.4162014,37.1148879 30,23.0000003 35,20.9999998 M32.3799852,16.5165751 C32.3799852,13.7208604 34.6462779,11.4545677 37.4416972,11.4545677 C40.2371165,11.4545677 42.5034092,13.7208604 42.5034092,16.5165751 C42.5034092,19.3119944 40.2371165,21.5782871 37.4416972,21.5782871 C34.6462779,21.5782871 32.3799852,19.3119944 32.3799852,16.5165751 L32.3799852,16.5165751 L32.3799852,16.5165751 Z" id="Stroke-2" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M38.714576,41.2169701 L52.8955236,41.2169701" id="Path-Copy-34" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M15.9543641,53.73899 L15.9543641,59.5 L23.6357107,59.5 L23.6357107,53.6593267" id="Stroke-1" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M41.8847131,53.6593267 L41.8847131,59.5 L49.5660597,59.5 L49.5660597,53.73899" id="Path" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M40,11 L40,7 L43,7 L43,4 L50,4 L50,7 L53,7 L53,27 L50,27 L50,30 L43,30 L43,27 L40,27 L40,21" id="Rectangle-336" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>
