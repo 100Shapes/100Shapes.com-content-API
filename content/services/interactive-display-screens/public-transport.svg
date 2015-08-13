@@ -5,13 +5,13 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="icon_public-transport" sketch:type="MSArtboardGroup" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M39.6,50.1 L46.6,61.1 L39.6,50.1 Z" id="train" stroke="#215CFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <path d="M24.6,50.1 L17.6,61.1 L24.6,50.1 Z" id="Path-Copy-4" stroke="#215CFF" stroke-width="3" sketch:type="MSShapeGroup"></path>
-            <rect id="Rectangle" stroke="#215CFF" stroke-width="3" sketch:type="MSShapeGroup" x="17.6" y="11.1044985" width="29" height="20" rx="6"></rect>
-            <rect id="Path" stroke="#215CFF" stroke-width="3" sketch:type="MSShapeGroup" x="10.6" y="4.1" width="43" height="46" rx="11"></rect>
-            <ellipse id="Oval-1" stroke="#FFD605" stroke-width="4" sketch:type="MSShapeGroup" cx="23.1" cy="40.6" rx="3.5" ry="3.5"></ellipse>
-            <ellipse id="Oval-1-Copy" stroke="#FFD605" stroke-width="4" sketch:type="MSShapeGroup" cx="41.1" cy="40.6" rx="3.5" ry="3.5"></ellipse>
+        <g id="icon_public-transport" sketch:type="MSArtboardGroup" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M39.6,50.1 L46.6,61.1 L39.6,50.1 Z" id="train" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <path d="M24.6,50.1 L17.6,61.1 L24.6,50.1 Z" id="Path-Copy-4" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle" stroke="#215CFF" sketch:type="MSShapeGroup" x="17.6" y="11.1044985" width="29" height="20" rx="6"></rect>
+            <rect id="Path" stroke="#215CFF" sketch:type="MSShapeGroup" x="10.6" y="4.1" width="43" height="46" rx="11"></rect>
+            <ellipse id="Oval-1" stroke="#FFD605" sketch:type="MSShapeGroup" cx="23.1" cy="40.6" rx="3.5" ry="3.5"></ellipse>
+            <ellipse id="Oval-1-Copy" stroke="#FFD605" sketch:type="MSShapeGroup" cx="41.1" cy="40.6" rx="3.5" ry="3.5"></ellipse>
         </g>
     </g>
 </svg>
