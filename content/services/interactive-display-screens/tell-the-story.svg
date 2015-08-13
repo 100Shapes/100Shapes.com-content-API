@@ -9,9 +9,9 @@
             <path d="M11.5,26.5 L40,26.5" id="Line" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
             <path d="M11.5,35.5 L31.5,35.5" id="Line-Copy-2" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
             <path d="M11.5,17.5 L49,17.5" id="Line-Copy" stroke="#215CFF" sketch:type="MSShapeGroup"></path>
-            <rect id="Path" stroke="#FFD605" sketch:type="MSShapeGroup" x="41.0228812" y="10.2492182" width="9.49242632" height="35.7366136" rx="0.905836932"></rect>
-            <path d="M12.396088,48.2832687 C21.8169301,42.4356151 14.8778879,53.2842472 24.697881,48.6013787" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
-            <path d="M36.3098584,43.5014495 L26.5758223,47.3346598 L30.1431912,37.3347823" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M12.396088,49.2832687 C21.8169301,43.4356151 14.8778879,54.2842472 24.697881,49.6013787" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <path d="M36.3098584,44.5014495 L26.5758223,48.3346598 L30.1431912,38.3347823" id="Path" stroke="#FFD605" sketch:type="MSShapeGroup"></path>
+            <rect id="Rectangle-388" stroke="#FFD605" sketch:type="MSShapeGroup" transform="translate(45.505689, 29.005689) rotate(-315.000000) translate(-45.505689, -29.005689) " x="41.0056892" y="13.0056892" width="9" height="32" rx="1"></rect>
         </g>
     </g>
 </svg>
