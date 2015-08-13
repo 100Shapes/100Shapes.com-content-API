@@ -1,0 +1,80 @@
+---
+title: How to make adverts interactive with Brainient and React.js
+title_long: How to make adverts interactive with Brainient and React.js
+subtitle: In 6 simple steps.
+square_image: make-adverts-interactive-with-brainient-and-react-js-square.png
+banner_image: make-adverts-interactive-with-brainient-and-react-js.png
+author: Paolo Memoli
+date: 2015-08-14
+featured: false
+category: UX &amp; Design
+description: >
+    Make your own interactive advert - a developer’s guide
+twitter_handle: "@100shapes"
+---
+
+
+
+<div class="wrapper">
+    <div class="grid grid-align-center">
+        <div class="grid-item sm-1/1 lg-8/12">
+            <p class="fz+">Adverts are part of our everyday lives. Advertisers use various techniques to communicate with their audience such as forced pre-content adverts in youtube or banners on websites.</p>
+        </div>
+    </div>
+        <div class="grid grid-align-right">
+            <div class="grid-item 1/1 md-6/12 lg-4/12 xl-5/12">
+                <p>On demand video providers such as ITV use a variety of tools to stream targeted advertising pre, during and after their programmes. One tool they use is Brainient who have pioneered the "interactive advert"  - a new type of ad which allows users to click and manipulate ads in order to increase their engagement. This new type of advert has helped brainient stick out from the sea of interactive advertising platforms and become a compelling option for large media organisations.</p>
+            </div>
+            <div class="grid-item 1/1 md-6/12 xl-5/12">
+                <ohs-about-callout class="ml0 md-ml+ xl-ml++"></ohs-about-callout>
+            </div>
+        </div>
+    <div class="grid grid-align-center">
+        <div class="grid-item sm-1/1 lg-8/12">
+            <p>We recently developed an interactive video marketing prototype for ITV, using Brainient’s interactive advertising technology.</p>
+
+            <h2>What is Brainient?</h2>
+
+            <p>ITV use Brainient to deliver their ads on their ITV player platform, Brainient platform provides tools to create interactive video formats which can be reported on in real time. It uses flash and a simple templating system to create adverts. To make your own simple, interactive advert, you need to: </p>
+
+            <ol>
+                <li>Pick a swf layout for the type of advert you want</li>
+                <li>Add your artwork</li>
+                <li>Wire up the buttons to CTAs or URLs</li>
+                <li>Save and deploy the advert</li>
+            </ol>
+            
+        	<figure>
+                <img src="brainient-interactive-advertising-interface.png">
+                <figcaption>Brainient's interactive advertising user interface</figcaption>
+            </figure>
+            
+            <p>When the advert is played it loads the chosen .swf, pulls in the assets uploaded to the website and pipes down a complete advert.</p>
+
+            <p>This is great for most use cases of interactive adverts but we needed something more flexible. Our itv prototype required a platform and a controller for advert to browser communication and client-side DOM manipulation (html of the page).</p>
+
+            <p>This allows us to insert new UI elements to the page outside the video/advert content. To surface these extra capabilities, we leveraged Brainient’s ‘custom .swf’ feature to inject and load an entire JavaScript react.js app into the page.</p>            
+         </div>
+    </div>
+    <ohs-mailinglist-signup config="{ slim: true }"></ohs-mailinglist-signup>
+    <div class="grid grid-align-center">
+        <div class="grid-item sm-1/1 lg-8/12">
+            
+            <h2>6 steps to create an interactive advert using Brainient & React.js</h2>
+            
+           	<ol>
+                <li>The custom .swf object loads the required JS files from a URL specified in the ‘advert creation’ admin site.</li>
+                <li>The JS file loads the app and inserts the required DOM elements (if not done already).</li>
+                <li>The JS app plays one of the specified adverts</li>
+                <li>The JS app knows and sends what adverts have been watched by the user</li>
+                <li>The JS app adds any saved ads to a newly inserted toolbar in the DOM.</li>
+                <li>The TV content plays when all adverts are complete.</li>
+            </ol>
+
+            <p>Platforms and Modern tools like Brainient and React.js are enabling broadcasters to develop evermore exciting and compelling technologies such as interactive videos helping to create stronger bonds with their audience.</p>
+
+            <p>Got a wireframing tip to share? Let us know what works for you! Tweet us <a href="https://twitter.com/intent/tweet?screen_name=100shapes">@100shapes</a>.</p>
+            
+        </div>
+    </div>
+</div>
