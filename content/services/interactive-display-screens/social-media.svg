@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="icon_social-media" sketch:type="MSArtboardGroup" stroke-width="4" stroke-linecap="round">
+        <g id="icon_social-media" sketch:type="MSArtboardGroup" stroke-width="3" stroke-linecap="round">
             <path d="M16,17.3930288 L16,14.0029268 C16,11.2398866 18.231557,9 21.0093855,9 L55.9906145,9 C58.7572217,9 61,11.2426503 61,13.9960486 L61,37.0039514 C61,39.7631929 58.7533351,42 56.0012645,42 L55,42" id="Rectangle-318" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup"></path>
             <path d="M56.258715,39.3819526 L55.7823733,49.6759304 L50.125519,44.0190761" id="Rectangle-319" stroke="#215CFF" stroke-linejoin="round" sketch:type="MSShapeGroup" transform="translate(53.192117, 44.528941) scale(-1, 1) rotate(-315.000000) translate(-53.192117, -44.528941) "></path>
             <path d="M13,39 L31.4508365,39" id="Path-Copy-37" stroke="#FFD605" fill="#D8D8D8" sketch:type="MSShapeGroup"></path>
