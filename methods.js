@@ -48,10 +48,9 @@ module.exports = function(server) {
             } else {
               folder[items_name] = _.reject(folder[items_name], 'draft', true)
             }
-
             // Sort returned items
             if (random != true) {
-                folder[items_name] = _.sortBy(folder[items_name], '-date');
+                folder[items_name] = _.sortBy(folder[items_name], 'date').reverse();
             } else {
                 folder[items_name] = _.shuffle(folder[items_name]);
             }
