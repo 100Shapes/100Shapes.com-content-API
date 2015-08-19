@@ -26,7 +26,7 @@ module.exports = function(server) {
 
         .use(htmlMinifier()) // Use the default options
 
-        .use(typeset_content)
+        //.use(typeset_content)
 
         .use(load)
 
