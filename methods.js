@@ -40,7 +40,12 @@ module.exports = function(server) {
             });
 
             // Filter items by coverted query
-            folder[items_name] = _.filter(server.app.content[folder_name].items, query)
+            var items = _.filter(server.app.content[folder_name].items, query)
+
+            // Remove unwanted items in list view
+            _.forEach(items, function (item){
+                folder[items_name].push(_.omit(item, server.app.ignoreFromList));
+            })
 
             // Sane Defaults
             if (draft) {
@@ -59,6 +64,7 @@ module.exports = function(server) {
             if (!isNaN(limit)){
               folder[items_name] = folder[items_name].slice(0, limit);
             }
+
         }
 
         return next(null, folder);
