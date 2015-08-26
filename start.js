@@ -4,6 +4,7 @@ var url = require('url')
 var cheerio = require('cheerio');
 var fs = require('fs');
 var md5 = require('md5');
+var typeset = require('typeset');
 
 var Metalsmith = require('metalsmith');
 
@@ -24,6 +25,8 @@ module.exports = function(server) {
             .destination("public")
 
         .use(htmlMinifier()) // Use the default options
+
+        //.use(typeset_content)
 
         .use(load)
 
@@ -111,6 +114,15 @@ module.exports = function(server) {
                     server.app.content[folder_name].meta.count = _.size(server.app.content[folder_name].items)
                 }
             });
+        });
+        done();
+    };
+
+    function typeset_content(files, metalsmith, done) {
+        _.each(files, function (file, key) {
+           if (path.extname(key) === '.html') {
+               file.contents = typeset(file.contents.toString());
+           }
         });
         done();
     };
