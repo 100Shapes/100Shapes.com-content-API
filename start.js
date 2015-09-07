@@ -5,6 +5,7 @@ var cheerio = require('cheerio');
 var fs = require('fs');
 var md5 = require('md5');
 var typeset = require('typeset');
+var imagemin = require('metalsmith-imagemin');
 
 var Metalsmith = require('metalsmith');
 
@@ -19,22 +20,27 @@ module.exports = function(server) {
     server.start(function() {
         console.log('Using base url: ' + server.app.base_url)
         console.log('Using content From: ' + server.app.content_path)
+
         var metalsmith = Metalsmith(__dirname)
 
-        .source(server.app.content_path)
+            .source(server.app.content_path)
             .destination("public")
 
-        .use(htmlMinifier()) // Use the default options
+            .use(htmlMinifier()) // Use the default options
 
-        //.use(typeset_content)
+            //.use(typeset_content)
 
-        .use(load)
+            .use(imagemin({
+                optimizationLevel: 3
+            }))
 
-        .use(ignore('**/index.html'))
+            .use(load)
 
-        .build(function(err) {
-            if (err) throw err;
-        });
+            .use(ignore('**/index.html'))
+
+            .build(function(err) {
+                if (err) throw err;
+            });
 
         console.log('Server running at:', server.info.uri);
     });
@@ -120,9 +126,9 @@ module.exports = function(server) {
 
     function typeset_content(files, metalsmith, done) {
         _.each(files, function (file, key) {
-           if (path.extname(key) === '.html') {
-               file.contents = typeset(file.contents.toString());
-           }
+            if (path.extname(key) === '.html') {
+                file.contents = typeset(file.contents.toString());
+            }
         });
         done();
     };
