@@ -17,10 +17,11 @@ RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases
 
 RUN npm install -g npm
 
-ENV BRANCH stage
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-content-API.git
-ENV VIRTUAL_HOST stage.api.100shapes.com
-ENV FRONTEND_URL http://stage.100shapes.com
+
+ENV BRANCH production
+ENV VIRTUAL_HOST api.100shapes.com
+ENV FRONTEND_URL http://www.100shapes.com
 
 RUN mkdir -p /etc/my_init.d
 ADD clone-content.sh /pd_build/clone-content.sh
