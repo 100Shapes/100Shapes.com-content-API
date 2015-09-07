@@ -17,8 +17,9 @@ RUN curl -sLo /usr/local/bin/ep https://github.com/kreuzwerker/envplate/releases
 
 RUN npm install -g npm
 
-ENV BRANCH stage
 ENV GIT_URL https://github.com/100Shapes/100Shapes.com-content-API.git
+
+ENV BRANCH stage
 ENV VIRTUAL_HOST stage.api.100shapes.com
 ENV FRONTEND_URL http://stage.100shapes.com
 
