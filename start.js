@@ -30,9 +30,9 @@ module.exports = function(server) {
 
             //.use(typeset_content)
 
-            .use(imagemin({
-                optimizationLevel: 3
-            }))
+            // .use(imagemin({
+            //     optimizationLevel: 3
+            // }))
 
             .use(load)
 
