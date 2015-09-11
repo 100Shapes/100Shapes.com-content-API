@@ -21,9 +21,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
-  "devDependencies": {
-    "metalsmith-imagemin": "^1.1.3"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/100Shapes/100Shapes.com-content-API.git"

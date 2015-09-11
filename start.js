@@ -5,7 +5,6 @@ var cheerio = require('cheerio');
 var fs = require('fs');
 var md5 = require('md5');
 var typeset = require('typeset');
-var imagemin = require('metalsmith-imagemin');
 
 var Metalsmith = require('metalsmith');
 
@@ -29,10 +28,6 @@ module.exports = function(server) {
             .use(htmlMinifier()) // Use the default options
 
             //.use(typeset_content)
-
-            .use(imagemin({
-                optimizationLevel: 3
-            }))
 
             .use(load)
 
