@@ -86,9 +86,11 @@ module.exports = function(server) {
                         item.guid = md5(item.slug);
 
                         // Add items sitemap and RSS feeds
-                        server.app.sitemap.add({
-                            url: item.frontend_url
-                        });
+                        if (folder_name != "l"){
+                            server.app.sitemap.add({
+                                url: item.frontend_url
+                            });
+                        }
 
                         if (folder_name == "blog") {
                             server.app.feed.item({
